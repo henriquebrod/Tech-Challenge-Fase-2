@@ -1,0 +1,1 @@
+O pipeline foi desenvolvido utilizando a arquitetura Medalhão e dados públicos do Base dos Dados (BigQuery). Os notebooks contêm os resultados consolidados das execuções. Caso deseje reexecutar a ingestão de dados brutos diretamente do BigQuery, insira um arquivo de credenciais do GCP nomeado como credenciais_gcp.json na raiz do projeto.
