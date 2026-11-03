@@ -1,6 +1,6 @@
 # Pipeline Híbrido para Análise da Alfabetização no Brasil
 
-> **Vídeo Executivo da Apresentação:** O arquivo de vídeo com a demonstração da solução foi enviado em anexo na entrega da plataforma.
+> **Vídeo Executivo & Apresentação:** O arquivo de vídeo foi enviado em anexo na plataforma. A apresentação em slides utilizada na gravação está disponível em [`docs/Tech_Challenge_Fase_2.pdf`](docs/Tech_Challenge_Fase_2.pdf).
 
 ---
 
