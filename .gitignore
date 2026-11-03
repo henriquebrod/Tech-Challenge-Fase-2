@@ -25,4 +25,4 @@ data_lake/gold/_staging/
 # pelo pipeline. A Gold (pequena, base da Fase 3) e os relatórios CSV continuam versionados.
 data_lake/bronze/*.parquet
 data_lake/silver/*.parquet
-data_lake/gold/*.parquet
+data_lake/gold/
