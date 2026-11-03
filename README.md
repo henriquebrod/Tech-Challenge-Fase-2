@@ -396,6 +396,7 @@ A Gold fica no BigQuery (`alfabetizacao_gold`) e em Parquet versionado em `data_
 - Python **3.12** e [Google Cloud CLI](https://cloud.google.com/sdk/docs/install).
 - Projeto GCP com BigQuery (funciona no **Sandbox**, sem faturamento). O streaming com Pub/Sub exige faturamento ativo.
 - Para o alerta: conta Gmail com verificação em duas etapas e uma **senha de app** (16 letras).
+  \*Para a configuração inicial da infraestrutura no Google Cloud, a conta utilizada deve possuir permissões IAM para habilitar as APIs necessárias, criar tópicos e assinaturas no Pub/Sub e configurar datasets e tabelas no BigQuery. Não é obrigatório possuir o papel de proprietário (Owner), desde que a conta tenha as permissões adequadas para essas operações. Os comandos de configuração do Streaming estão disponíveis em docs/streaming_finops.md
 
 ### Passo a passo (Terminal do VS Code; no Windows use `.venv\Scripts\Activate`, no Linux/macOS `source .venv/bin/activate`)
 
