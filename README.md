@@ -435,6 +435,7 @@ A estrutura do repositório organiza os componentes de ingestão, transformaçã
 
 ```text
 Tech_Challenge_Fase_2.ipynb    Pipeline batch (Bronze, Silver, Gold, publicação e Apêndice A)
+Documentacao_Tecnica.md        Documentação técnica detalhada de dados e regras de negócio
 nuvem/lake.py                  Persistência das camadas no BigQuery (load jobs)
 qualidade/verificador.py       Regras de qualidade bloqueantes e informativas
 qualidade/simular_falha.py     Simulação controlada de falha de qualidade
@@ -443,11 +444,9 @@ monitoramento/alertas.py       Notificações automáticas por e-mail
 streaming/                     producer.py, consumer.py, exportar_silver.py
 tests/                         Testes automatizados de transformações, qualidade e lake
 data_lake/
-  bronze/                      Arquivos Parquet locais da camada Bronze
-  silver/                      Arquivos Parquet locais da camada Silver
-  gold/                        Arquivos Parquet da Gold, versionados para a Fase 3
-  quality_reports/             execution_log.csv, gold_checks.csv, gold_anomalias.csv
-docs/                          streaming_finops.md, roteiro_video.md
+  bronze/, silver/, gold/       Parquet local (fora do Git; recriados pelo pipeline/BigQuery)
+  quality_reports/              execution_log.csv, gold_checks.csv, gold_anomalias.csv, silver_checks.csv
+docs/                           streaming_finops.md, Tech_Challenge_Fase_2.pdf
 evidencias/
   execucao_final/              Evidências da execução final de 01/11/2026
   streaming_pubsub_2026-10/    Evidências do streaming com Pub/Sub (17 a 29/10)
