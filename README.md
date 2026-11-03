@@ -441,8 +441,7 @@ monitoramento/alertas.py        alerta por e-mail
 streaming/                      producer.py, consumer.py, exportar_silver.py
 tests/                          test_nuvem.py, test_qualidade.py, test_transformacoes.py
 data_lake/
-  bronze/, silver/              Parquet local (fora do Git; ficam no BigQuery)
-  gold/                         Parquet da Gold (versionado, base da Fase 3)
+  bronze/, silver/, gold/       Parquet local (fora do Git; recriados pelo pipeline/BigQuery)
   quality_reports/              execution_log.csv, gold_checks.csv, gold_anomalias.csv, silver_checks.csv
 docs/                           streaming_finops.md, Tech_Challenge_Fase_2.pdf
 evidencias/
