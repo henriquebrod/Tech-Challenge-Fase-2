@@ -21,8 +21,8 @@ __pycache__/
 *.tmp.parquet
 data_lake/gold/_staging/
 
-# Bronze e Silver: ficam no BigQuery (datasets alfabetizacao_bronze e _silver) e são recriadas
-# pelo pipeline. A Gold (pequena, base da Fase 3) e os relatórios CSV continuam versionados.
+# Bronze, Silver e Gold: ficam no BigQuery (datasets alfabetizacao_bronze, _silver e _gold) 
+# e são recriadas pelo pipeline. Os relatórios de auditoria em CSV continuam versionados.
 data_lake/bronze/*.parquet
 data_lake/silver/*.parquet
 data_lake/gold/
