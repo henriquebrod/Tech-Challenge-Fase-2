@@ -451,19 +451,31 @@ evidencias/
   monitoramento_2026-10/        primeiro teste do alerta (26/10)
 ```
 
-| Evidência (`evidencias/execucao_final/`)   | O que comprova                                                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `01_orcamento_bigquery_pubsub_storage.png` | Orçamento com alertas em 50/90/100% cobrindo BigQuery, Pub/Sub e Cloud Storage                   |
-| `02_testes_28_aprovados.png`               | 28 testes aprovados (o 29º, da meta por trajetória, foi incluído depois e também passa)          |
-| `03_exportacao_silver_streaming.png`       | Eventos do streaming levados à Silver no BigQuery                                                |
-| `04_` e `05_anomalia_duplicatas_*.png`     | Investigação das duplicatas do streaming                                                         |
-| `06_alerta_email_falha_controlada.png`     | Alerta por e-mail da falha controlada (regra bloqueante), mesmo Run ID do print `09`             |
-| `../monitoramento_2026-10/01` a `03`       | Primeiro teste do canal de alerta (26/10): falha forçada, registro e e-mail em menos de 1 minuto |
-| `07_bigquery_datasets.png`                 | Datasets das camadas no BigQuery                                                                 |
-| `08_bronze_historico_2_cargas.png`         | Histórico da Bronze preservado (2 cargas)                                                        |
-| `09_bigquery_falhas_registradas.png`       | Falhas registradas no BigQuery                                                                   |
+| Evidência (`evidencias/execucao_final/`)         | O que comprova                                                                          |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| `01_orcamento_bigquery_pubsub_storage.png`       | Orçamento com alertas em 50/90/100% cobrindo BigQuery, Pub/Sub e Cloud Storage          |
+| `02_testes_28_aprovados.png`                     | 28 testes aprovados (o 29º, da meta por trajetória, foi incluído depois e também passa) |
+| `03_exportacao_silver_streaming.png`             | Eventos do streaming levados à Silver no BigQuery                                       |
+| `04_` e `05_anomalia_duplicatas_*.png`           | Investigação das duplicatas do streaming                                                |
+| `../monitoramento_2026-10/01_*.png` a `03_*.png` | Primeiro teste do canal de alerta (26/10): falha forçada, registro e e-mail             |
+| `07_bigquery_datasets.png`                       | Datasets das camadas no BigQuery                                                        |
+| `08_bronze_historico_2_cargas.png`               | Histórico da Bronze preservado (2 cargas)                                               |
+| `09_bigquery_falhas_registradas.png`             | Falhas registradas no BigQuery                                                          |
 
-O notebook salvo contém as saídas da execução `20261101_234421` (a terceira; a ingestão aparece com 0 byte faturado por causa do cache) e, no Apêndice A, a falha controlada `FALHA_CONTROLADA_20261101_235525`, com o alerta enviado. Os bytes da execução sem cache estão em `data_lake/quality_reports/execution_log.csv` (`run_id` `20261101_220215`).
+Testes de falha e alertas automáticos
+O mecanismo de monitoramento registra as falhas de execução e solicita o envio de notificações automáticas por e-mail.
+
+Em 26/10/2026, foi realizado um teste com uma exceção simulada do tipo ValueError, utilizando a etapa TESTE_FALHA_EMAIL e o identificador TESTE-ALERTA-001.
+
+O teste demonstrou o registro da falha e o recebimento do alerta no Gmail em menos de um minuto, conforme os horários registrados nas evidências. O tempo de recebimento pode variar conforme a conexão e o serviço de e-mail.
+
+Adicionalmente, o módulo qualidade/simular_falha.py implementa uma simulação de duplicidade na camada Silver. A função checar_chave_unica identifica registros duplicados, registra a reprovação da regra bloqueante no gold_checks.csv e lança a exceção FalhaQualidadeBloqueante, interrompendo a execução.
+
+A simulação utiliza uma cópia dos dados em memória, preservando o arquivo Silver original.
+
+O notebook salvo contém as saídas da execução 20261101_234421 (a terceira; a ingestão aparece com 0 byte faturado devido ao cache) e, no Apêndice A, a execução controlada FALHA_CONTROLADA_20261101_235525.
+
+Os bytes da execução sem cache estão registrados em data_lake/quality_reports/execution_log.csv, com run_id 20261101_220215.
 
 ---
 
