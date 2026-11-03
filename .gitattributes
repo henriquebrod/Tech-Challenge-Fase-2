@@ -1,0 +1,2 @@
+# Só a Gold em Parquet é versionada (~1,3 MB): sem Git LFS
+*.parquet binary

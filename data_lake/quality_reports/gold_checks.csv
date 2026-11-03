@@ -1,0 +1,475 @@
+gold_run_ts,regra,tabela,tipo,status,valor,limiar,detalhe,registrado_em
+20261031_212958,codigo_unico_no_dicionario:alunos.presenca,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Ausente', '1': 'Presente'}",2026-10-31T21:30:11.585085+00:00
+20261031_212958,codigo_unico_no_dicionario:alunos.preenchimento_caderno,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Prova não preenchida', '1': 'Prova preenchida'}",2026-10-31T21:30:11.624082+00:00
+20261031_212958,codigo_unico_no_dicionario:alunos.alfabetizado,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Não', '1': 'Sim'}",2026-10-31T21:30:11.627073+00:00
+20261031_212958,rede_chave_injetiva:alunos,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T21:30:11.667218+00:00
+20261031_212958,codigo_desconhecido:alunos.rede,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T21:30:12.143326+00:00
+20261031_212958,rede_desconhecida,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T21:30:14.428245+00:00
+20261031_212958,uf_derivada_do_codigo_ibge,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T21:30:15.026400+00:00
+20261031_212958,rede_chave_injetiva:municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.302854+00:00
+20261031_212958,codigo_desconhecido:municipio.rede,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.309859+00:00
+20261031_212958,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.337858+00:00
+20261031_212958,codigo_desconhecido:municipio.serie,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.343852+00:00
+20261031_212958,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.365862+00:00
+20261031_212958,chave_unica:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.375382+00:00
+20261031_212958,chave_unica:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.385389+00:00
+20261031_212958,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio,informativa,APROVADO,0,0,,2026-10-31T21:30:18.391389+00:00
+20261031_212958,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.393391+00:00
+20261031_212958,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0.9778,0.9,10654/10896 linhas com par,2026-10-31T21:30:18.426391+00:00
+20261031_212958,tipos_chaves_compativeis:municipio_x_pesos_alunos,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.450384+00:00
+20261031_212958,taxa_correspondencia_join:municipio_x_pesos_alunos,gold_municipio,informativa,REPROVADO,0.9425,0.95,10269/10896 linhas com par,2026-10-31T21:30:18.480609+00:00
+20261031_212958,consistencia_taxa_municipio_vs_tabela_meta,gold_municipio,bloqueante,APROVADO,0.9997,0.95,"6620 idênticas e 10581 até 0,5 p.p. de 10584 comparáveis; maior diferença 36.07 p.p.",2026-10-31T21:30:18.490915+00:00
+20261031_212958,rede_chave_injetiva:uf,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.615247+00:00
+20261031_212958,codigo_desconhecido:uf.rede,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.618242+00:00
+20261031_212958,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.621241+00:00
+20261031_212958,codigo_desconhecido:uf.serie,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.625248+00:00
+20261031_212958,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.631239+00:00
+20261031_212958,chave_unica:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.634247+00:00
+20261031_212958,chave_unica:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.641242+00:00
+20261031_212958,anos_resultado_sem_tabela_meta:uf_x_meta_uf,gold_uf,informativa,APROVADO,0,0,,2026-10-31T21:30:18.643247+00:00
+20261031_212958,tipos_chaves_compativeis:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.645239+00:00
+20261031_212958,taxa_correspondencia_join:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,1.0,0.95,49/49 linhas com par,2026-10-31T21:30:18.653252+00:00
+20261031_212958,consistencia_taxa_uf_vs_tabela_meta,gold_uf,bloqueante,APROVADO,1.0,0.95,"42 idênticas e 49 até 0,5 p.p. de 49 comparáveis; maior diferença 0.05 p.p.",2026-10-31T21:30:18.659250+00:00
+20261031_212958,tipos_chaves_compativeis:uf_x_pesos_alunos,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.668786+00:00
+20261031_212958,taxa_correspondencia_join:uf_x_pesos_alunos,gold_uf,informativa,REPROVADO,0.6316,0.95,48/76 linhas com par,2026-10-31T21:30:18.676783+00:00
+20261031_212958,rede_desconhecida,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.715912+00:00
+20261031_212958,chave_unica:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.717911+00:00
+20261031_212958,tipos_chaves_compativeis:brasil_x_agregado_ufs,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.747905+00:00
+20261031_212958,taxa_correspondencia_join:brasil_x_agregado_ufs,gold_brasil,informativa,REPROVADO,0.6667,1.0,2/3 linhas com par,2026-10-31T21:30:18.759087+00:00
+20261031_212958,tipos_chaves_compativeis:brasil_x_microdado,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.763081+00:00
+20261031_212958,taxa_correspondencia_join:brasil_x_microdado,gold_brasil,informativa,REPROVADO,0.6667,1.0,2/3 linhas com par,2026-10-31T21:30:18.770742+00:00
+20261031_212958,tipos_chaves_compativeis:uf_x_microdado,gold_validacao,bloqueante,APROVADO,0,0,,2026-10-31T21:30:18.811207+00:00
+20261031_212958,taxa_correspondencia_join:uf_x_microdado,gold_validacao,informativa,APROVADO,0.9793,0.95,142/145 linhas com par,2026-10-31T21:30:18.816212+00:00
+20261031_212958,prova_dos_nove_convergencia,gold_validacao,informativa,APROVADO,0.9792,0.95,141/144 recortes com |diferença| <= 0.5 p.p.,2026-10-31T21:30:18.822207+00:00
+20261031_212958,sem_vazamento_de_alvo,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-10-31T21:30:19.977900+00:00
+20261031_212958,correlacao_maxima_feature_alvo,gold_features_fase3,informativa,APROVADO,0.6506,0.98,feature: media_portugues_ano_anterior,2026-10-31T21:30:19.982992+00:00
+20261031_232517,codigo_unico_no_dicionario:alunos.presenca,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Ausente', '1': 'Presente'}",2026-10-31T23:26:39.887646+00:00
+20261031_232517,codigo_unico_no_dicionario:alunos.preenchimento_caderno,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Prova não preenchida', '1': 'Prova preenchida'}",2026-10-31T23:26:39.957649+00:00
+20261031_232517,codigo_unico_no_dicionario:alunos.alfabetizado,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Não', '1': 'Sim'}",2026-10-31T23:26:39.963674+00:00
+20261031_232517,rede_chave_injetiva:alunos,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T23:26:40.006671+00:00
+20261031_232517,codigo_desconhecido:alunos.rede,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T23:26:40.570780+00:00
+20261031_232517,rede_desconhecida,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T23:26:43.539874+00:00
+20261031_232517,uf_derivada_do_codigo_ibge,gold_microdados,bloqueante,APROVADO,0,0,,2026-10-31T23:26:44.364232+00:00
+20261031_232517,rede_chave_injetiva:municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.402896+00:00
+20261031_232517,codigo_desconhecido:municipio.rede,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.412447+00:00
+20261031_232517,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.439447+00:00
+20261031_232517,codigo_desconhecido:municipio.serie,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.446445+00:00
+20261031_232517,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.470272+00:00
+20261031_232517,chave_nula_ou_vazia:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.482041+00:00
+20261031_232517,chave_unica:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.488406+00:00
+20261031_232517,chave_nula_ou_vazia:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.503449+00:00
+20261031_232517,chave_unica:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.508430+00:00
+20261031_232517,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio,informativa,APROVADO,0,0,,2026-10-31T23:26:57.513879+00:00
+20261031_232517,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.516886+00:00
+20261031_232517,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0.9778,0.9,10654/10896 linhas com par,2026-10-31T23:26:57.561279+00:00
+20261031_232517,tipos_chaves_compativeis:municipio_x_pesos_alunos,gold_municipio,bloqueante,APROVADO,0,0,,2026-10-31T23:26:57.590799+00:00
+20261031_232517,taxa_correspondencia_join:municipio_x_pesos_alunos,gold_municipio,informativa,REPROVADO,0.9425,0.95,10269/10896 linhas com par,2026-10-31T23:26:57.635800+00:00
+20261031_232517,consistencia_taxa_municipio_vs_tabela_meta,gold_municipio,bloqueante,APROVADO,0.9997,0.95,"6620 idênticas e 10581 até 0,5 p.p. de 10584 comparáveis; maior diferença 36.07 p.p.",2026-10-31T23:26:57.647069+00:00
+20261031_232517,percentual_nulos_meta_do_ano,gold_municipio,informativo,APROVADO,51.98,,5664 valores nulos em 10896 linhas (51.98%).,2026-10-31T23:26:57.649102+00:00
+20261031_232517,rede_chave_injetiva:uf,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.689249+00:00
+20261031_232517,codigo_desconhecido:uf.rede,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.694369+00:00
+20261031_232517,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.698250+00:00
+20261031_232517,codigo_desconhecido:uf.serie,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.704250+00:00
+20261031_232517,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.716250+00:00
+20261031_232517,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.722256+00:00
+20261031_232517,chave_unica:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.726248+00:00
+20261031_232517,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.732246+00:00
+20261031_232517,chave_unica:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.734245+00:00
+20261031_232517,anos_resultado_sem_tabela_meta:uf_x_meta_uf,gold_uf,informativa,APROVADO,0,0,,2026-10-31T23:27:15.738247+00:00
+20261031_232517,tipos_chaves_compativeis:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.740247+00:00
+20261031_232517,taxa_correspondencia_join:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,1.0,0.95,49/49 linhas com par,2026-10-31T23:27:15.747718+00:00
+20261031_232517,consistencia_taxa_uf_vs_tabela_meta,gold_uf,bloqueante,APROVADO,1.0,0.95,"42 idênticas e 49 até 0,5 p.p. de 49 comparáveis; maior diferença 0.05 p.p.",2026-10-31T23:27:15.755716+00:00
+20261031_232517,tipos_chaves_compativeis:uf_x_pesos_alunos,gold_uf,bloqueante,APROVADO,0,0,,2026-10-31T23:27:15.764815+00:00
+20261031_232517,taxa_correspondencia_join:uf_x_pesos_alunos,gold_uf,informativa,REPROVADO,0.6316,0.95,48/76 linhas com par,2026-10-31T23:27:15.777815+00:00
+20261031_232517,rede_desconhecida,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T23:27:31.445244+00:00
+20261031_232517,chave_nula_ou_vazia:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-10-31T23:27:31.450248+00:00
+20261031_232517,chave_unica:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-10-31T23:27:31.456245+00:00
+20261031_232517,tipos_chaves_compativeis:brasil_x_agregado_ufs,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T23:27:31.475242+00:00
+20261031_232517,taxa_correspondencia_join:brasil_x_agregado_ufs,gold_brasil,informativa,REPROVADO,0.6667,1.0,2/3 linhas com par,2026-10-31T23:27:31.482242+00:00
+20261031_232517,tipos_chaves_compativeis:brasil_x_microdado,gold_brasil,bloqueante,APROVADO,0,0,,2026-10-31T23:27:31.484247+00:00
+20261031_232517,taxa_correspondencia_join:brasil_x_microdado,gold_brasil,informativa,REPROVADO,0.6667,1.0,2/3 linhas com par,2026-10-31T23:27:31.493245+00:00
+20261031_232517,tipos_chaves_compativeis:uf_x_microdado,gold_validacao,bloqueante,APROVADO,0,0,,2026-10-31T23:27:48.640801+00:00
+20261031_232517,taxa_correspondencia_join:uf_x_microdado,gold_validacao,informativa,APROVADO,0.9793,0.95,142/145 linhas com par,2026-10-31T23:27:48.649799+00:00
+20261031_232517,prova_dos_nove_convergencia,gold_validacao,informativa,APROVADO,0.9792,0.95,141/144 recortes com |diferença| <= 0.5 p.p.,2026-10-31T23:27:48.657799+00:00
+20261031_232517,sem_vazamento_de_alvo,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-10-31T23:28:21.230135+00:00
+20261031_232517,correlacao_maxima_feature_alvo,gold_features_fase3,informativa,APROVADO,0.6506,0.98,feature: media_portugues_ano_anterior,2026-10-31T23:28:21.237934+00:00
+20261101_220215,duplicatas_exatas_removidas,municipio_silver,informativa,APROVADO,0,0,,2026-11-01T22:06:24.768891+00:00
+20261101_220215,duplicatas_exatas_removidas,uf_silver,informativa,APROVADO,0,0,,2026-11-01T22:06:36.357046+00:00
+20261101_220215,duplicatas_exatas_removidas,meta_alfabetizacao_brasil_silver,informativa,APROVADO,0,0,,2026-11-01T22:06:47.442137+00:00
+20261101_220215,duplicatas_exatas_removidas,meta_alfabetizacao_uf_silver,informativa,APROVADO,0,0,,2026-11-01T22:06:59.120262+00:00
+20261101_220215,duplicatas_exatas_removidas,meta_alfabetizacao_municipio_silver,informativa,APROVADO,0,0,,2026-11-01T22:07:10.822988+00:00
+20261101_220215,duplicatas_exatas_removidas,dicionario_silver,informativa,APROVADO,0,0,,2026-11-01T22:07:22.150395+00:00
+20261101_220215,duplicatas_exatas_removidas,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T22:10:07.831272+00:00
+20261101_220215,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.843493+00:00
+20261101_220215,chave_unica:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.849522+00:00
+20261101_220215,chave_nula_ou_vazia:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.855598+00:00
+20261101_220215,chave_unica:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.861309+00:00
+20261101_220215,chave_nula_ou_vazia:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.861309+00:00
+20261101_220215,chave_unica:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.867400+00:00
+20261101_220215,chave_nula_ou_vazia:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.867400+00:00
+20261101_220215,chave_unica:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.873436+00:00
+20261101_220215,chave_nula_ou_vazia:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.885555+00:00
+20261101_220215,chave_unica:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.891603+00:00
+20261101_220215,chave_nula_ou_vazia:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.897772+00:00
+20261101_220215,chave_unica:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:18.903725+00:00
+20261101_220215,chave_nula_ou_vazia:ano+id_municipio+id_aluno,alunos_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:23.649815+00:00
+20261101_220215,aluno_repetido_no_ano,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T22:10:25.335257+00:00
+20261101_220215,formato:id_municipio,municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:10:25.352114+00:00
+20261101_220215,formato:id_municipio,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:10:25.358136+00:00
+20261101_220215,formato:id_municipio,alunos_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:10:26.800547+00:00
+20261101_220215,dominio:sigla_uf,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:26.806918+00:00
+20261101_220215,dominio:sigla_uf,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:10:26.806918+00:00
+20261101_220215,intervalo:taxa_alfabetizacao,municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.812678+00:00
+20261101_220215,intervalo:taxa_alfabetizacao,uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.818701+00:00
+20261101_220215,intervalo:taxa_alfabetizacao,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.818701+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.824830+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.824830+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.830808+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.836868+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.836868+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.842902+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.842902+00:00
+20261101_220215,intervalo:taxa_alfabetizacao,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.849045+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.849045+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.855024+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.861144+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.861144+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.867159+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.867159+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.873222+00:00
+20261101_220215,intervalo:taxa_alfabetizacao,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.879292+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.879292+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.885664+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.885664+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.891721+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.897489+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.897489+00:00
+20261101_220215,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:10:26.903663+00:00
+20261101_220215,percentual_nulos:taxa_alfabetizacao,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T22:10:26.903663+00:00
+20261101_220215,percentual_nulos:media_portugues,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T22:10:26.909858+00:00
+20261101_220215,percentual_nulos:taxa_alfabetizacao,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T22:10:26.909858+00:00
+20261101_220215,percentual_nulos:media_portugues,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T22:10:26.915738+00:00
+20261101_220215,percentual_nulos:proficiencia,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T22:10:26.934259+00:00
+20261101_220215,percentual_nulos:peso_aluno,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T22:10:26.952120+00:00
+20261101_220215,codigo_unico_no_dicionario:alunos.presenca,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Ausente', '1': 'Presente'}",2026-11-01T22:11:57.246318+00:00
+20261101_220215,codigo_unico_no_dicionario:alunos.preenchimento_caderno,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Prova não preenchida', '1': 'Prova preenchida'}",2026-11-01T22:11:57.251421+00:00
+20261101_220215,codigo_unico_no_dicionario:alunos.alfabetizado,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Não', '1': 'Sim'}",2026-11-01T22:11:57.258532+00:00
+20261101_220215,rede_chave_injetiva:alunos,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:11:57.266858+00:00
+20261101_220215,codigo_desconhecido:alunos.rede,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:11:57.942070+00:00
+20261101_220215,rede_desconhecida,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:12:02.199495+00:00
+20261101_220215,uf_derivada_do_codigo_ibge,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:12:03.193005+00:00
+20261101_220215,rede_chave_injetiva:municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.608947+00:00
+20261101_220215,codigo_desconhecido:municipio.rede,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.617107+00:00
+20261101_220215,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.663562+00:00
+20261101_220215,codigo_desconhecido:municipio.serie,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.672679+00:00
+20261101_220215,codigo_desconhecido:municipio.rede,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.683854+00:00
+20261101_220215,rede_desconhecida,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.685901+00:00
+20261101_220215,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.712245+00:00
+20261101_220215,chave_nula_ou_vazia:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.730343+00:00
+20261101_220215,chave_unica:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.736392+00:00
+20261101_220215,chave_nula_ou_vazia:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.759632+00:00
+20261101_220215,chave_unica:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.764632+00:00
+20261101_220215,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio,informativa,APROVADO,0,0,,2026-11-01T22:12:07.771679+00:00
+20261101_220215,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.774771+00:00
+20261101_220215,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0.9778,0.9,10654/10896 linhas com par,2026-11-01T22:12:07.797437+00:00
+20261101_220215,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio_simulado,informativa,REPROVADO,1,0,anos: [2026],2026-11-01T22:12:07.820643+00:00
+20261101_220215,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.824642+00:00
+20261101_220215,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio_simulado,informativa,REPROVADO,0.0,0.9,0/0 linhas com par,2026-11-01T22:12:07.837286+00:00
+20261101_220215,tipos_chaves_compativeis:municipio_x_pesos_alunos,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:12:07.855019+00:00
+20261101_220215,taxa_correspondencia_join:municipio_x_pesos_alunos,gold_municipio,informativa,REPROVADO,0.9424,0.95,10269/10897 linhas com par,2026-11-01T22:12:07.897340+00:00
+20261101_220215,consistencia_taxa_municipio_vs_tabela_meta,gold_municipio,bloqueante,APROVADO,0.9997,0.95,"6620 idênticas e 10581 até 0,5 p.p. de 10584 comparáveis; maior diferença 36.07 p.p.",2026-11-01T22:12:07.908621+00:00
+20261101_220215,percentual_nulos_meta_do_ano,gold_municipio,informativa,APROVADO,51.99,,5665 valores nulos em 10897 linhas (51.99%).,2026-11-01T22:12:07.912621+00:00
+20261101_220215,rede_chave_injetiva:uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.645325+00:00
+20261101_220215,codigo_desconhecido:uf.rede,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.650325+00:00
+20261101_220215,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.654887+00:00
+20261101_220215,codigo_desconhecido:uf.serie,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.659938+00:00
+20261101_220215,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.666938+00:00
+20261101_220215,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.672999+00:00
+20261101_220215,chave_unica:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.677071+00:00
+20261101_220215,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.686121+00:00
+20261101_220215,chave_unica:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.689121+00:00
+20261101_220215,anos_resultado_sem_tabela_meta:uf_x_meta_uf,gold_uf,informativa,APROVADO,0,0,,2026-11-01T22:12:19.694165+00:00
+20261101_220215,tipos_chaves_compativeis:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.697165+00:00
+20261101_220215,taxa_correspondencia_join:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,1.0,0.95,49/49 linhas com par,2026-11-01T22:12:19.707250+00:00
+20261101_220215,consistencia_taxa_uf_vs_tabela_meta,gold_uf,bloqueante,APROVADO,1.0,0.95,"42 idênticas e 49 até 0,5 p.p. de 49 comparáveis; maior diferença 0.05 p.p.",2026-11-01T22:12:19.717429+00:00
+20261101_220215,tipos_chaves_compativeis:uf_x_pesos_alunos,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:12:19.729491+00:00
+20261101_220215,taxa_correspondencia_join:uf_x_pesos_alunos,gold_uf,informativa,APROVADO,0.9796,0.95,48/49 linhas com par,2026-11-01T22:12:19.738551+00:00
+20261101_220215,rede_desconhecida,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:30.976910+00:00
+20261101_220215,chave_nula_ou_vazia:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:30.981979+00:00
+20261101_220215,chave_unica:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:30.985978+00:00
+20261101_220215,tipos_chaves_compativeis:agregado_ufs_x_media_simples,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:31.002960+00:00
+20261101_220215,taxa_correspondencia_join:agregado_ufs_x_media_simples,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:12:31.010028+00:00
+20261101_220215,tipos_chaves_compativeis:brasil_x_agregado_ufs,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:31.014086+00:00
+20261101_220215,taxa_correspondencia_join:brasil_x_agregado_ufs,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:12:31.022145+00:00
+20261101_220215,tipos_chaves_compativeis:brasil_x_microdado,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:12:31.026145+00:00
+20261101_220215,taxa_correspondencia_join:brasil_x_microdado,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:12:31.034211+00:00
+20261101_220215,tipos_chaves_compativeis:uf_x_microdado,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:12:42.139862+00:00
+20261101_220215,taxa_correspondencia_join:uf_x_microdado,gold_validacao,informativa,APROVADO,0.9793,0.95,142/145 linhas com par,2026-11-01T22:12:42.149927+00:00
+20261101_220215,prova_dos_nove_convergencia,gold_validacao,informativa,APROVADO,0.9792,0.95,141/144 recortes com |diferença| <= 0.5 p.p.,2026-11-01T22:12:42.157010+00:00
+20261101_220215,tipos_chaves_compativeis:ilustracao_x_brasil,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:12:43.498255+00:00
+20261101_220215,taxa_correspondencia_join:ilustracao_x_brasil,gold_validacao,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:12:43.507366+00:00
+20261101_220215,tipos_chaves_compativeis:municipios_agregados_x_uf,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:12:43.530491+00:00
+20261101_220215,taxa_correspondencia_join:municipios_agregados_x_uf,gold_validacao,informativa,APROVADO,1.0,0.95,48/48 linhas com par,2026-11-01T22:12:43.540597+00:00
+20261101_220215,tipos_chaves_compativeis:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:13:10.187683+00:00
+20261101_220215,taxa_correspondencia_join:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0.9905,0.95,5396/5448 linhas com par,2026-11-01T22:13:10.211876+00:00
+20261101_220215,tipos_chaves_compativeis:features_x_uf_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:13:10.217931+00:00
+20261101_220215,taxa_correspondencia_join:features_x_uf_ano_anterior,gold_features_fase3,informativa,APROVADO,1.0,0.9,5396/5396 linhas com par,2026-11-01T22:13:10.228008+00:00
+20261101_220215,sem_vazamento_de_alvo,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:13:10.239058+00:00
+20261101_220215,correlacao_maxima_feature_alvo,gold_features_fase3,informativa,APROVADO,0.6506,0.98,feature: media_portugues_ano_anterior,2026-11-01T22:13:10.245059+00:00
+FALHA_CONTROLADA_20261101_221507,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,APROVADO,0,0,,2026-11-01T22:15:07.052569+00:00
+FALHA_CONTROLADA_20261101_221507,chave_unica:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,REPROVADO,1,0,,2026-11-01T22:15:07.056571+00:00
+20261101_223849,duplicatas_exatas_removidas,municipio_silver,informativa,APROVADO,0,0,,2026-11-01T22:42:46.112569+00:00
+20261101_223849,duplicatas_exatas_removidas,uf_silver,informativa,APROVADO,0,0,,2026-11-01T22:42:56.973991+00:00
+20261101_223849,duplicatas_exatas_removidas,meta_alfabetizacao_brasil_silver,informativa,APROVADO,0,0,,2026-11-01T22:43:08.064958+00:00
+20261101_223849,duplicatas_exatas_removidas,meta_alfabetizacao_uf_silver,informativa,APROVADO,0,0,,2026-11-01T22:43:18.746790+00:00
+20261101_223849,duplicatas_exatas_removidas,meta_alfabetizacao_municipio_silver,informativa,APROVADO,0,0,,2026-11-01T22:43:30.705561+00:00
+20261101_223849,duplicatas_exatas_removidas,dicionario_silver,informativa,APROVADO,0,0,,2026-11-01T22:43:43.665448+00:00
+20261101_223849,duplicatas_exatas_removidas,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T22:45:25.648642+00:00
+20261101_223849,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.475559+00:00
+20261101_223849,chave_unica:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.479559+00:00
+20261101_223849,chave_nula_ou_vazia:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.480976+00:00
+20261101_223849,chave_unica:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.484657+00:00
+20261101_223849,chave_nula_ou_vazia:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.486660+00:00
+20261101_223849,chave_unica:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.487659+00:00
+20261101_223849,chave_nula_ou_vazia:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.490661+00:00
+20261101_223849,chave_unica:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.492661+00:00
+20261101_223849,chave_nula_ou_vazia:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.499659+00:00
+20261101_223849,chave_unica:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.501661+00:00
+20261101_223849,chave_nula_ou_vazia:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.503155+00:00
+20261101_223849,chave_unica:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:36.503155+00:00
+20261101_223849,chave_nula_ou_vazia:ano+id_municipio+id_aluno,alunos_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:38.849683+00:00
+20261101_223849,aluno_repetido_no_ano,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T22:45:39.861196+00:00
+20261101_223849,formato:id_municipio,municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:45:39.874172+00:00
+20261101_223849,formato:id_municipio,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:45:39.878953+00:00
+20261101_223849,formato:id_municipio,alunos_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T22:45:40.648229+00:00
+20261101_223849,dominio:sigla_uf,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:40.648229+00:00
+20261101_223849,dominio:sigla_uf,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T22:45:40.648229+00:00
+20261101_223849,intervalo:taxa_alfabetizacao,municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.654746+00:00
+20261101_223849,intervalo:taxa_alfabetizacao,uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.654746+00:00
+20261101_223849,intervalo:taxa_alfabetizacao,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.654746+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.654746+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.660673+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.660673+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.660673+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.660673+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.667894+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.669424+00:00
+20261101_223849,intervalo:taxa_alfabetizacao,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.669424+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.672608+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.672949+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.672949+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.672949+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.678842+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.678842+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.678842+00:00
+20261101_223849,intervalo:taxa_alfabetizacao,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.678842+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.684946+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.684946+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.684946+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.691169+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.691169+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.691169+00:00
+20261101_223849,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T22:45:40.691169+00:00
+20261101_223849,percentual_nulos:taxa_alfabetizacao,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T22:45:40.696732+00:00
+20261101_223849,percentual_nulos:media_portugues,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T22:45:40.696732+00:00
+20261101_223849,percentual_nulos:taxa_alfabetizacao,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T22:45:40.696732+00:00
+20261101_223849,percentual_nulos:media_portugues,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T22:45:40.696732+00:00
+20261101_223849,percentual_nulos:proficiencia,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T22:45:40.709302+00:00
+20261101_223849,percentual_nulos:peso_aluno,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T22:45:40.715252+00:00
+20261101_223849,codigo_unico_no_dicionario:alunos.presenca,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Ausente', '1': 'Presente'}",2026-11-01T22:47:02.398790+00:00
+20261101_223849,codigo_unico_no_dicionario:alunos.preenchimento_caderno,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Prova não preenchida', '1': 'Prova preenchida'}",2026-11-01T22:47:02.398790+00:00
+20261101_223849,codigo_unico_no_dicionario:alunos.alfabetizado,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Não', '1': 'Sim'}",2026-11-01T22:47:02.404942+00:00
+20261101_223849,rede_chave_injetiva:alunos,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:47:02.411094+00:00
+20261101_223849,codigo_desconhecido:alunos.rede,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:47:02.805017+00:00
+20261101_223849,rede_desconhecida,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:47:04.776772+00:00
+20261101_223849,uf_derivada_do_codigo_ibge,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T22:47:05.306985+00:00
+20261101_223849,rede_chave_injetiva:municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.133347+00:00
+20261101_223849,codigo_desconhecido:municipio.rede,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.139460+00:00
+20261101_223849,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.165588+00:00
+20261101_223849,codigo_desconhecido:municipio.serie,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.171859+00:00
+20261101_223849,codigo_desconhecido:municipio.rede,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.177405+00:00
+20261101_223849,rede_desconhecida,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.177405+00:00
+20261101_223849,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.193484+00:00
+20261101_223849,chave_nula_ou_vazia:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.203973+00:00
+20261101_223849,chave_unica:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.203973+00:00
+20261101_223849,chave_nula_ou_vazia:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.222522+00:00
+20261101_223849,chave_unica:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.228675+00:00
+20261101_223849,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio,informativa,APROVADO,0,0,,2026-11-01T22:47:08.234742+00:00
+20261101_223849,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.234742+00:00
+20261101_223849,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0.9778,0.9,10654/10896 linhas com par,2026-11-01T22:47:08.258520+00:00
+20261101_223849,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio_simulado,informativa,REPROVADO,1,0,anos: [2026],2026-11-01T22:47:08.276713+00:00
+20261101_223849,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.276713+00:00
+20261101_223849,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio_simulado,informativa,REPROVADO,0.0,0.9,0/0 linhas com par,2026-11-01T22:47:08.288624+00:00
+20261101_223849,tipos_chaves_compativeis:municipio_x_pesos_alunos,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T22:47:08.304153+00:00
+20261101_223849,taxa_correspondencia_join:municipio_x_pesos_alunos,gold_municipio,informativa,REPROVADO,0.9424,0.95,10269/10897 linhas com par,2026-11-01T22:47:08.325154+00:00
+20261101_223849,consistencia_taxa_municipio_vs_tabela_meta,gold_municipio,bloqueante,APROVADO,0.9997,0.95,"6620 idênticas e 10581 até 0,5 p.p. de 10584 comparáveis; maior diferença 36.07 p.p.",2026-11-01T22:47:08.325154+00:00
+20261101_223849,percentual_nulos_meta_do_ano,gold_municipio,informativa,APROVADO,51.99,,5665 valores nulos em 10897 linhas (51.99%).,2026-11-01T22:47:08.325154+00:00
+20261101_223849,rede_chave_injetiva:uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.447357+00:00
+20261101_223849,codigo_desconhecido:uf.rede,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.452455+00:00
+20261101_223849,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.458128+00:00
+20261101_223849,codigo_desconhecido:uf.serie,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.464197+00:00
+20261101_223849,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.464197+00:00
+20261101_223849,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.464197+00:00
+20261101_223849,chave_unica:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.479834+00:00
+20261101_223849,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.479834+00:00
+20261101_223849,chave_unica:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.479834+00:00
+20261101_223849,anos_resultado_sem_tabela_meta:uf_x_meta_uf,gold_uf,informativa,APROVADO,0,0,,2026-11-01T22:47:20.495472+00:00
+20261101_223849,tipos_chaves_compativeis:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.495472+00:00
+20261101_223849,taxa_correspondencia_join:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,1.0,0.95,49/49 linhas com par,2026-11-01T22:47:20.511574+00:00
+20261101_223849,consistencia_taxa_uf_vs_tabela_meta,gold_uf,bloqueante,APROVADO,1.0,0.95,"42 idênticas e 49 até 0,5 p.p. de 49 comparáveis; maior diferença 0.05 p.p.",2026-11-01T22:47:20.511574+00:00
+20261101_223849,tipos_chaves_compativeis:uf_x_pesos_alunos,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T22:47:20.527410+00:00
+20261101_223849,taxa_correspondencia_join:uf_x_pesos_alunos,gold_uf,informativa,APROVADO,0.9796,0.95,48/49 linhas com par,2026-11-01T22:47:20.543308+00:00
+20261101_223849,rede_desconhecida,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.227598+00:00
+20261101_223849,chave_nula_ou_vazia:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.228452+00:00
+20261101_223849,chave_unica:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.228452+00:00
+20261101_223849,tipos_chaves_compativeis:agregado_ufs_x_media_simples,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.239722+00:00
+20261101_223849,taxa_correspondencia_join:agregado_ufs_x_media_simples,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:47:32.245796+00:00
+20261101_223849,tipos_chaves_compativeis:brasil_x_agregado_ufs,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.245796+00:00
+20261101_223849,taxa_correspondencia_join:brasil_x_agregado_ufs,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:47:32.251849+00:00
+20261101_223849,tipos_chaves_compativeis:brasil_x_microdado,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T22:47:32.251849+00:00
+20261101_223849,taxa_correspondencia_join:brasil_x_microdado,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:47:32.257905+00:00
+20261101_223849,tipos_chaves_compativeis:uf_x_microdado,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:48:16.662355+00:00
+20261101_223849,taxa_correspondencia_join:uf_x_microdado,gold_validacao,informativa,APROVADO,0.9793,0.95,142/145 linhas com par,2026-11-01T22:48:16.677024+00:00
+20261101_223849,prova_dos_nove_convergencia,gold_validacao,informativa,APROVADO,0.9792,0.95,141/144 recortes com |diferença| <= 0.5 p.p.,2026-11-01T22:48:16.684671+00:00
+20261101_223849,tipos_chaves_compativeis:ilustracao_x_brasil,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:48:18.254100+00:00
+20261101_223849,taxa_correspondencia_join:ilustracao_x_brasil,gold_validacao,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T22:48:18.269737+00:00
+20261101_223849,tipos_chaves_compativeis:municipios_agregados_x_uf,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T22:48:18.285370+00:00
+20261101_223849,taxa_correspondencia_join:municipios_agregados_x_uf,gold_validacao,informativa,APROVADO,1.0,0.95,48/48 linhas com par,2026-11-01T22:48:18.301008+00:00
+20261101_223849,tipos_chaves_compativeis:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:48:45.437201+00:00
+20261101_223849,taxa_correspondencia_join:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0.9905,0.95,5396/5448 linhas com par,2026-11-01T22:48:45.454618+00:00
+20261101_223849,tipos_chaves_compativeis:features_x_uf_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:48:45.461128+00:00
+20261101_223849,taxa_correspondencia_join:features_x_uf_ano_anterior,gold_features_fase3,informativa,APROVADO,1.0,0.9,5396/5396 linhas com par,2026-11-01T22:48:45.468584+00:00
+20261101_223849,sem_vazamento_de_alvo,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T22:48:45.474500+00:00
+20261101_223849,correlacao_maxima_feature_alvo,gold_features_fase3,informativa,APROVADO,0.6506,0.98,feature: media_portugues_ano_anterior,2026-11-01T22:48:45.474500+00:00
+FALHA_CONTROLADA_20261101_225040,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,APROVADO,0,0,,2026-11-01T22:50:40.783647+00:00
+FALHA_CONTROLADA_20261101_225040,chave_unica:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,REPROVADO,1,0,,2026-11-01T22:50:40.793284+00:00
+FALHA_CONTROLADA_20261101_225319,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,APROVADO,0,0,,2026-11-01T22:53:19.450930+00:00
+FALHA_CONTROLADA_20261101_225319,chave_unica:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,REPROVADO,1,0,,2026-11-01T22:53:19.456517+00:00
+FALHA_CONTROLADA_20261101_225554,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,APROVADO,0,0,,2026-11-01T22:55:54.890344+00:00
+FALHA_CONTROLADA_20261101_225554,chave_unica:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,REPROVADO,1,0,,2026-11-01T22:55:54.895429+00:00
+20261101_234421,duplicatas_exatas_removidas,municipio_silver,informativa,APROVADO,0,0,,2026-11-01T23:48:33.374242+00:00
+20261101_234421,duplicatas_exatas_removidas,uf_silver,informativa,APROVADO,0,0,,2026-11-01T23:48:43.497519+00:00
+20261101_234421,duplicatas_exatas_removidas,meta_alfabetizacao_brasil_silver,informativa,APROVADO,0,0,,2026-11-01T23:48:53.474424+00:00
+20261101_234421,duplicatas_exatas_removidas,meta_alfabetizacao_uf_silver,informativa,APROVADO,0,0,,2026-11-01T23:49:04.032734+00:00
+20261101_234421,duplicatas_exatas_removidas,meta_alfabetizacao_municipio_silver,informativa,APROVADO,0,0,,2026-11-01T23:49:14.636360+00:00
+20261101_234421,duplicatas_exatas_removidas,dicionario_silver,informativa,APROVADO,0,0,,2026-11-01T23:49:26.478687+00:00
+20261101_234421,duplicatas_exatas_removidas,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T23:50:58.554111+00:00
+20261101_234421,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.934544+00:00
+20261101_234421,chave_unica:ano+id_municipio+serie+rede,municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.942583+00:00
+20261101_234421,chave_nula_ou_vazia:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.950138+00:00
+20261101_234421,chave_unica:ano+sigla_uf+serie+rede,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.953141+00:00
+20261101_234421,chave_nula_ou_vazia:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.957154+00:00
+20261101_234421,chave_unica:ano+rede,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.960445+00:00
+20261101_234421,chave_nula_ou_vazia:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.964442+00:00
+20261101_234421,chave_unica:ano+sigla_uf+rede,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.966474+00:00
+20261101_234421,chave_nula_ou_vazia:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.976015+00:00
+20261101_234421,chave_unica:ano+id_municipio+rede,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.979522+00:00
+20261101_234421,chave_nula_ou_vazia:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.982522+00:00
+20261101_234421,chave_unica:id_tabela+nome_coluna+chave,dicionario_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:10.985589+00:00
+20261101_234421,chave_nula_ou_vazia:ano+id_municipio+id_aluno,alunos_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:13.391945+00:00
+20261101_234421,aluno_repetido_no_ano,alunos_silver,informativa,APROVADO,0,0,,2026-11-01T23:51:14.582825+00:00
+20261101_234421,formato:id_municipio,municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T23:51:14.593368+00:00
+20261101_234421,formato:id_municipio,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T23:51:14.599388+00:00
+20261101_234421,formato:id_municipio,alunos_silver,bloqueante,APROVADO,0,0,padrão \d{7},2026-11-01T23:51:15.456570+00:00
+20261101_234421,dominio:sigla_uf,uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:15.460595+00:00
+20261101_234421,dominio:sigla_uf,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,0,,2026-11-01T23:51:15.464098+00:00
+20261101_234421,intervalo:taxa_alfabetizacao,municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.477847+00:00
+20261101_234421,intervalo:taxa_alfabetizacao,uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.481972+00:00
+20261101_234421,intervalo:taxa_alfabetizacao,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.485484+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.488582+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.491102+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.494126+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.497310+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.500820+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.501821+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_brasil_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.505847+00:00
+20261101_234421,intervalo:taxa_alfabetizacao,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.508353+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.512898+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.516410+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.519411+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.524124+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.528131+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.530657+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_uf_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.535171+00:00
+20261101_234421,intervalo:taxa_alfabetizacao,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.539677+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2024,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.542683+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2025,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.545196+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2026,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.548707+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2027,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.551013+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2028,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.554517+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2029,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.559524+00:00
+20261101_234421,intervalo:meta_alfabetizacao_2030,meta_alfabetizacao_municipio_silver,bloqueante,APROVADO,0,"[0, 100]",,2026-11-01T23:51:15.562031+00:00
+20261101_234421,percentual_nulos:taxa_alfabetizacao,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T23:51:15.566094+00:00
+20261101_234421,percentual_nulos:media_portugues,municipio_silver,informativa,APROVADO,0.0,,0 nulos em 23995 linhas,2026-11-01T23:51:15.570130+00:00
+20261101_234421,percentual_nulos:taxa_alfabetizacao,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T23:51:15.576162+00:00
+20261101_234421,percentual_nulos:media_portugues,uf_silver,informativa,APROVADO,0.0,,0 nulos em 145 linhas,2026-11-01T23:51:15.579677+00:00
+20261101_234421,percentual_nulos:proficiencia,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T23:51:15.597702+00:00
+20261101_234421,percentual_nulos:peso_aluno,alunos_silver,informativa,APROVADO,13.27,,513338 nulos em 3867999 linhas,2026-11-01T23:51:15.613325+00:00
+20261101_234421,codigo_unico_no_dicionario:alunos.presenca,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Ausente', '1': 'Presente'}",2026-11-01T23:52:33.809214+00:00
+20261101_234421,codigo_unico_no_dicionario:alunos.preenchimento_caderno,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Prova não preenchida', '1': 'Prova preenchida'}",2026-11-01T23:52:33.813215+00:00
+20261101_234421,codigo_unico_no_dicionario:alunos.alfabetizado,gold_microdados,bloqueante,APROVADO,1,1,"dicionário: {'0': 'Não', '1': 'Sim'}",2026-11-01T23:52:33.816445+00:00
+20261101_234421,rede_chave_injetiva:alunos,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T23:52:33.825160+00:00
+20261101_234421,codigo_desconhecido:alunos.rede,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T23:52:34.272578+00:00
+20261101_234421,rede_desconhecida,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T23:52:36.470364+00:00
+20261101_234421,uf_derivada_do_codigo_ibge,gold_microdados,bloqueante,APROVADO,0,0,,2026-11-01T23:52:37.044369+00:00
+20261101_234421,rede_chave_injetiva:municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.238627+00:00
+20261101_234421,codigo_desconhecido:municipio.rede,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.245699+00:00
+20261101_234421,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.269977+00:00
+20261101_234421,codigo_desconhecido:municipio.serie,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.275999+00:00
+20261101_234421,codigo_desconhecido:municipio.rede,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.289310+00:00
+20261101_234421,rede_desconhecida,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.293314+00:00
+20261101_234421,rede_desconhecida,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.312231+00:00
+20261101_234421,chave_nula_ou_vazia:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.325754+00:00
+20261101_234421,chave_unica:ano+id_municipio+rede_chave,meta_alfabetizacao_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.330261+00:00
+20261101_234421,chave_nula_ou_vazia:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.350336+00:00
+20261101_234421,chave_unica:ano+id_municipio+rede_chave,municipio (recorte),bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.355357+00:00
+20261101_234421,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio,informativa,APROVADO,0,0,,2026-11-01T23:52:41.360863+00:00
+20261101_234421,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.364366+00:00
+20261101_234421,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio,bloqueante,APROVADO,0.9778,0.9,10654/10896 linhas com par,2026-11-01T23:52:41.389453+00:00
+20261101_234421,anos_resultado_sem_tabela_meta:municipio_x_meta_municipio,gold_municipio_simulado,informativa,APROVADO,0,0,anos [2026] comparados com a trajetória pactuada em 2024,2026-11-01T23:52:41.409064+00:00
+20261101_234421,tipos_chaves_compativeis:municipio_x_meta_municipio,gold_municipio_simulado,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.412571+00:00
+20261101_234421,taxa_correspondencia_join:municipio_x_meta_municipio,gold_municipio_simulado,informativa,APROVADO,1.0,0.9,1/1 linhas com par,2026-11-01T23:52:41.422144+00:00
+20261101_234421,tipos_chaves_compativeis:municipio_x_pesos_alunos,gold_municipio,bloqueante,APROVADO,0,0,,2026-11-01T23:52:41.440885+00:00
+20261101_234421,taxa_correspondencia_join:municipio_x_pesos_alunos,gold_municipio,informativa,REPROVADO,0.9424,0.95,10269/10897 linhas com par,2026-11-01T23:52:41.485828+00:00
+20261101_234421,consistencia_taxa_municipio_vs_tabela_meta,gold_municipio,bloqueante,APROVADO,0.9997,0.95,"6620 idênticas e 10581 até 0,5 p.p. de 10584 comparáveis; maior diferença 36.07 p.p.",2026-11-01T23:52:41.497356+00:00
+20261101_234421,percentual_nulos_meta_do_ano,gold_municipio,informativa,APROVADO,51.98,,5664 valores nulos em 10897 linhas (51.98%).,2026-11-01T23:52:41.499587+00:00
+20261101_234421,rede_chave_injetiva:uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.369525+00:00
+20261101_234421,codigo_desconhecido:uf.rede,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.372525+00:00
+20261101_234421,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.375035+00:00
+20261101_234421,codigo_desconhecido:uf.serie,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.378054+00:00
+20261101_234421,rede_desconhecida,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.384023+00:00
+20261101_234421,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.388046+00:00
+20261101_234421,chave_unica:ano+sigla_uf+rede_chave,meta_alfabetizacao_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.390045+00:00
+20261101_234421,chave_nula_ou_vazia:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.394551+00:00
+20261101_234421,chave_unica:ano+sigla_uf+rede_chave,uf (recorte),bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.398379+00:00
+20261101_234421,anos_resultado_sem_tabela_meta:uf_x_meta_uf,gold_uf,informativa,APROVADO,0,0,,2026-11-01T23:52:52.401383+00:00
+20261101_234421,tipos_chaves_compativeis:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.404383+00:00
+20261101_234421,taxa_correspondencia_join:uf_x_meta_uf,gold_uf,bloqueante,APROVADO,1.0,0.95,49/49 linhas com par,2026-11-01T23:52:52.409487+00:00
+20261101_234421,consistencia_taxa_uf_vs_tabela_meta,gold_uf,bloqueante,APROVADO,1.0,0.95,"42 idênticas e 49 até 0,5 p.p. de 49 comparáveis; maior diferença 0.05 p.p.",2026-11-01T23:52:52.415514+00:00
+20261101_234421,tipos_chaves_compativeis:uf_x_pesos_alunos,gold_uf,bloqueante,APROVADO,0,0,,2026-11-01T23:52:52.423400+00:00
+20261101_234421,taxa_correspondencia_join:uf_x_pesos_alunos,gold_uf,informativa,APROVADO,0.9796,0.95,48/49 linhas com par,2026-11-01T23:52:52.429914+00:00
+20261101_234421,rede_desconhecida,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.082385+00:00
+20261101_234421,chave_nula_ou_vazia:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.085955+00:00
+20261101_234421,chave_unica:ano+rede_chave,meta_alfabetizacao_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.088959+00:00
+20261101_234421,tipos_chaves_compativeis:agregado_ufs_x_media_simples,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.102143+00:00
+20261101_234421,taxa_correspondencia_join:agregado_ufs_x_media_simples,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T23:53:04.108664+00:00
+20261101_234421,tipos_chaves_compativeis:brasil_x_agregado_ufs,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.110665+00:00
+20261101_234421,taxa_correspondencia_join:brasil_x_agregado_ufs,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T23:53:04.116992+00:00
+20261101_234421,tipos_chaves_compativeis:brasil_x_microdado,gold_brasil,bloqueante,APROVADO,0,0,,2026-11-01T23:53:04.120992+00:00
+20261101_234421,taxa_correspondencia_join:brasil_x_microdado,gold_brasil,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T23:53:04.127916+00:00
+20261101_234421,tipos_chaves_compativeis:uf_x_microdado,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T23:53:14.446665+00:00
+20261101_234421,taxa_correspondencia_join:uf_x_microdado,gold_validacao,informativa,APROVADO,0.9793,0.95,142/145 linhas com par,2026-11-01T23:53:14.455076+00:00
+20261101_234421,prova_dos_nove_convergencia,gold_validacao,informativa,APROVADO,0.9792,0.95,141/144 recortes com |diferença| <= 0.5 p.p.,2026-11-01T23:53:14.465204+00:00
+20261101_234421,tipos_chaves_compativeis:ilustracao_x_brasil,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T23:53:15.885552+00:00
+20261101_234421,taxa_correspondencia_join:ilustracao_x_brasil,gold_validacao,informativa,APROVADO,1.0,1.0,2/2 linhas com par,2026-11-01T23:53:15.892881+00:00
+20261101_234421,tipos_chaves_compativeis:municipios_agregados_x_uf,gold_validacao,bloqueante,APROVADO,0,0,,2026-11-01T23:53:15.916111+00:00
+20261101_234421,taxa_correspondencia_join:municipios_agregados_x_uf,gold_validacao,informativa,APROVADO,1.0,0.95,48/48 linhas com par,2026-11-01T23:53:15.924112+00:00
+20261101_234421,tipos_chaves_compativeis:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T23:53:39.853200+00:00
+20261101_234421,taxa_correspondencia_join:features_x_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0.9905,0.95,5396/5448 linhas com par,2026-11-01T23:53:39.867237+00:00
+20261101_234421,tipos_chaves_compativeis:features_x_uf_ano_anterior,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T23:53:39.874261+00:00
+20261101_234421,taxa_correspondencia_join:features_x_uf_ano_anterior,gold_features_fase3,informativa,APROVADO,1.0,0.9,5396/5396 linhas com par,2026-11-01T23:53:39.880802+00:00
+20261101_234421,sem_vazamento_de_alvo,gold_features_fase3,bloqueante,APROVADO,0,0,,2026-11-01T23:53:39.890401+00:00
+20261101_234421,correlacao_maxima_feature_alvo,gold_features_fase3,informativa,APROVADO,0.6506,0.98,feature: media_portugues_ano_anterior,2026-11-01T23:53:39.897966+00:00
+FALHA_CONTROLADA_20261101_235525,chave_nula_ou_vazia:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,APROVADO,0,0,,2026-11-01T23:55:25.945006+00:00
+FALHA_CONTROLADA_20261101_235525,chave_unica:ano+id_municipio+serie+rede,municipio_silver (cópia com linha repetida),bloqueante,REPROVADO,1,0,,2026-11-01T23:55:25.950510+00:00
+20261102_011743,duplicatas_exatas_removidas,municipio_silver,informativa,APROVADO,0,0,,2026-11-02T02:40:12.291441+00:00

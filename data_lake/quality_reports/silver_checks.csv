@@ -1,0 +1,18 @@
+timestamp,etapa,regra,tabela,tipo,aprovado,valor,detalhe
+2026-11-01T19:02:58.708721+00:00,silver_municipio,sigla_uf_nao_nula,uf_silver,bloqueante,True,0,0 registros com sigla_uf nula.
+2026-11-01T19:02:58.710721+00:00,silver_municipio,chave_negocio_uf_unica,uf_silver,bloqueante,True,0,0 linhas duplicadas para a chave de negócio da UF.
+2026-11-01T19:02:58.712731+00:00,silver_municipio,dominio_taxa_alfabetizacao_uf,uf_silver,bloqueante,True,0,"0 taxas fora do intervalo [0, 100] na UF."
+2026-11-01T19:04:33.164608+00:00,silver_municipio,chaves_brasil_nao_nulas,meta_alfabetizacao_brasil_silver,bloqueante,True,0,0 valores nulos nas chaves principais (ano/rede).
+2026-11-01T19:04:33.166606+00:00,silver_municipio,chave_negocio_brasil_unica,meta_alfabetizacao_brasil_silver,bloqueante,True,0,0 linhas duplicadas para a chave de negócio (ano/rede).
+2026-11-01T19:04:33.167606+00:00,silver_municipio,dominio_taxa_alfabetizacao_brasil,meta_alfabetizacao_brasil_silver,bloqueante,True,0,"0 taxas fora do intervalo [0, 100] na meta do Brasil."
+2026-11-01T19:05:16.944908+00:00,silver_municipio,chaves_meta_uf_nao_nulas,meta_alfabetizacao_uf_silver,bloqueante,True,0,0 valores nulos nas chaves principais (ano/sigla_uf/rede).
+2026-11-01T19:05:16.946913+00:00,silver_municipio,chave_negocio_meta_uf_unica,meta_alfabetizacao_uf_silver,bloqueante,True,0,0 linhas duplicadas para a chave de negócio (ano/sigla_uf/rede).
+2026-11-01T19:05:16.948912+00:00,silver_municipio,dominio_taxa_alfabetizacao_meta_uf,meta_alfabetizacao_uf_silver,bloqueante,True,0,"0 taxas fora do intervalo [0, 100] na meta da UF."
+2026-11-01T19:06:25.501196+00:00,silver_municipio,chaves_meta_municipio_nao_nulas,meta_alfabetizacao_municipio_silver,bloqueante,True,0,0 valores nulos nas chaves principais (ano/id_municipio/rede).
+2026-11-01T19:06:25.506197+00:00,silver_municipio,chave_negocio_meta_municipio_unica,meta_alfabetizacao_municipio_silver,bloqueante,True,0,0 linhas duplicadas para a chave de negócio (ano/id_municipio/rede).
+2026-11-01T19:06:25.507197+00:00,silver_municipio,dominio_taxa_alfabetizacao_meta_municipio,meta_alfabetizacao_municipio_silver,bloqueante,True,0,"0 taxas fora do intervalo [0, 100] na meta do município."
+2026-11-01T19:08:19.565113+00:00,silver_municipio,chaves_dicionario_nao_nulas,dicionario_silver,bloqueante,True,0,0 valores nulos em colunas obrigatórias do dicionário.
+2026-11-01T19:08:19.567114+00:00,silver_municipio,chave_primaria_dicionario_unica,dicionario_silver,bloqueante,True,0,0 mapeamentos duplicados para id_tabela/nome_coluna/chave.
+2026-11-01T19:09:17.487258+00:00,silver_municipio,chaves_alunos_nao_nulas,alunos_silver,bloqueante,True,0,0 valores nulos nas chaves de identificação principal dos alunos.
+2026-11-01T19:09:18.640352+00:00,silver_municipio,chave_negocio_aluno_unica,alunos_silver,bloqueante,True,0,0 registos duplicados para o mesmo aluno no mesmo ano.
+2026-11-01T19:09:18.646781+00:00,silver_municipio,dominio_peso_aluno_nao_negativo,alunos_silver,bloqueante,True,0,0 registos com peso de aluno negativo.

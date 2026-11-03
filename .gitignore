@@ -1,0 +1,28 @@
+# Credenciais e configurações locais
+.env
+.env.*
+!.env.example
+credenciais_gcp.json
+*credentials*.json
+*service-account*.json
+
+# Ambientes virtuais
+.venv*/
+venv/
+
+# Cache Python e testes
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Arquivos temporários
+*.log
+*.tmp.parquet
+data_lake/gold/_staging/
+
+# Bronze e Silver: ficam no BigQuery (datasets alfabetizacao_bronze e _silver) e são recriadas
+# pelo pipeline. A Gold (pequena, base da Fase 3) e os relatórios CSV continuam versionados.
+data_lake/bronze/*.parquet
+data_lake/silver/*.parquet
+data_lake/gold/*.parquet
