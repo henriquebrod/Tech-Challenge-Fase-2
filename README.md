@@ -1,6 +1,8 @@
 # Pipeline Híbrido para Análise da Alfabetização no Brasil
 
-> **Vídeo Executivo, Apresentação & Documentação:** O arquivo de vídeo foi enviado em anexo na plataforma. A apresentação em PDF está em [`docs/Tech_Challenge_Fase_2.pdf`](docs/Tech_Challenge_Fase_2.pdf) e a especificação completa de tipos, metadados e dicionário de dados pode ser consultada em [`Documentacao_Tecnica.md`](Documentacao_Tecnica.md).
+> **Vídeo Executivo:** [Assistir à demonstração no Google Drive](SEU_LINK_DO_GOOGLE_DRIVE_AQUI)  
+> **Apresentação em Slides:** [`docs/Tech_Challenge_Fase_2.pdf`](docs/Tech_Challenge_Fase_2.pdf)  
+> **Documentação Técnica:** [`Documentacao_Tecnica.md`](Documentacao_Tecnica.md)
 
 ---
 
