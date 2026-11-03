@@ -1,6 +1,6 @@
 # Pipeline Híbrido para Análise da Alfabetização no Brasil
 
-> **🎥 Vídeo Executivo da Apresentação:** [Acesse a apresentação de 5 minutos aqui (YouTube / Drive)] _(Inserir o link definitivo após a gravação)_
+> **Vídeo Executivo da Apresentação:** O arquivo de vídeo com a demonstração da solução foi enviado em anexo na entrega da plataforma.
 
 ---
 
