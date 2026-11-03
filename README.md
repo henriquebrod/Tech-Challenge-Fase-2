@@ -122,13 +122,13 @@ flowchart LR
 
 ### 4.2 Batch x Streaming
 
-| Critério                | Processamento Batch                                                                               | Processamento Streaming                                                                                           |
-| :---------------------- | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------- |
-| **Uso Principal**       | Carga histórica completa (7 tabelas, 3,9 milhões de registros)                                    | Atualizações pontuais e simuladas de indicadores em tempo real                                                    |
-| **Frequência**          | Por execução do notebook (acionamento sob demanda)                                                | Evento a evento; produtor configurado a cada 5 segundos                                                           |
-| **Latência**            | 10,8 a 11,7 minutos de ponta a ponta nas execuções oficiais, incluindo a persistência no BigQuery | Mediana de **0,89 segundos** entre produção e ingestão, sem acúmulo de fila                                       |
-| **Garantia de Entrega** | Execução atômica por lote: qualquer falha interrompe o pipeline e evita cargas parciais corruptas | Arquitetura Pub/Sub com entrega garantida (_at-least-once_); deduplicação gerenciada por `event_id` no consumidor |
-| **Unidade de Gravação** | Tabela completa por carga estruturada                                                             | Micro-lotes otimizados (lotes de 10 eventos ou janela de 10 segundos)                                             |
+| Critério                | Processamento Batch                                                                                         | Processamento Streaming                                                                                       |
+| :---------------------- | :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| **Uso Principal**       | Carga histórica completa (7 tabelas, 3,9 milhões de registros)                                              | Atualizações pontuais e simuladas de indicadores em tempo real                                                |
+| **Frequência**          | Por execução do notebook (acionamento sob demanda)                                                          | Evento a evento; produtor configurado a cada 5 segundos                                                       |
+| **Latência**            | 10,8 a 11,7 minutos de ponta a ponta nas execuções oficiais, incluindo a persistência no BigQuery           | Mediana de _0,89 segundos_ entre produção e ingestão, sem acúmulo de fila                                     |
+| **Garantia de Entrega** | Execução com validações bloqueantes: qualquer falha interrompe o pipeline e evita cargas parciais corruptas | Arquitetura Pub/Sub com entrega garantida (at-least-once); deduplicação gerenciada por event_id no consumidor |
+| **Unidade de Gravação** | Tabela completa por carga estruturada                                                                       | Micro-lotes otimizados (lotes de 10 eventos ou janela de 10 segundos)                                         |
 
 ### 4.3 Data lake x data warehouse
 
@@ -142,9 +142,9 @@ Os arquivos Parquet locais armazenados em `data_lake/` funcionam como o espelho 
 
 ### 4.4 Custo x performance
 
-- **Otimização de Leitura:** A Bronze armazena a cópia integral da fonte (`SELECT *`) para assegurar a reprodutibilidade do reprocessamento; a projeção e o filtro de colunas começam na Silver e na Gold (por exemplo, o parâmetro `COLUNAS_ALUNOS` na etapa 4.1 lê apenas 9 das 16 colunas disponíveis na Silver).
-- **Particionamento Inteligente:** A tabela Bronze no BigQuery é particionada por data de ingestão, garantindo que consultas pontuais leiam estritamente a partição correspondente.
-- **Publicação Atômica da Gold:** Com tamanho enxuto (5,3 MB no BigQuery), a tabela Gold é publicada por completo a cada execução bem-sucedida, simplificando a consistência e eliminando a complexidade de merges incrementais.
+- **Otimização de Leitura:** A Bronze armazena a cópia integral da fonte (SELECT \*) para assegurar a reprodutibilidade do reprocessamento; a projeção e o filtro de colunas começam na Silver e na Gold (por exemplo, o parâmetro COLUNAS_ALUNOS na etapa 4.1 lê apenas 9 das 16 colunas disponíveis na Silver).
+- **Particionamento Inteligente:** As tabelas Bronze no BigQuery são particionadas por data de ingestão, permitindo a leitura seletiva de partições quando as consultas aplicam filtros sobre a coluna de particionamento. Essa estratégia pode reduzir o volume de dados processados e melhorar a eficiência das consultas.
+- **Publicação Controlada da Gold:** Os dados são preparados inicialmente em gold/\_staging/ e avançam para a etapa 4.10 após a aprovação das regras bloqueantes de qualidade. Os arquivos aprovados são transferidos para a camada Gold definitiva e carregados no BigQuery por meio de jobs com WRITE_TRUNCATE. Essa estratégia reduz o risco de propagação de dados inválidos, próximo de ser uma transação atômica entre todas as tabelas.
 - **Eficiência no Streaming:** O processo de streaming interage com o BigQuery apenas uma vez por lote consolidado para executar a deduplicação (e não por evento individual), operando com um teto rígido de 1 GiB por consulta.
 
 ### 4.5 Política de escrita e preservação do histórico
