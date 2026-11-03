@@ -431,50 +431,104 @@ Todos os identificadores ficam num único arquivo, [`.env.example`](.env.example
 
 ## 13. Estrutura do repositório e evidências
 
+A estrutura do repositório organiza os componentes de ingestão, transformação, qualidade, monitoramento, streaming e publicação dos dados, além dos arquivos de evidência utilizados para demonstrar o funcionamento do pipeline.
+
 ```text
-Tech_Challenge_Fase_2.ipynb      pipeline batch completo (Bronze, Silver, Gold, publicação, Apêndice A)
-nuvem/lake.py                   envio das camadas ao BigQuery (load jobs)
-qualidade/verificador.py        regras bloqueantes e informativas
-qualidade/simular_falha.py      falha controlada
-monitoramento/registrador.py    métricas por etapa + envio ao BigQuery
-monitoramento/alertas.py        alerta por e-mail
-streaming/                      producer.py, consumer.py, exportar_silver.py
-tests/                          test_nuvem.py, test_qualidade.py, test_transformacoes.py
+Tech_Challenge_Fase_2.ipynb    Pipeline batch (Bronze, Silver, Gold, publicação e Apêndice A)
+nuvem/lake.py                  Persistência das camadas no BigQuery (load jobs)
+qualidade/verificador.py       Regras de qualidade bloqueantes e informativas
+qualidade/simular_falha.py     Simulação controlada de falha de qualidade
+monitoramento/registrador.py   Métricas e logs por etapa, com publicação no BigQuery
+monitoramento/alertas.py       Notificações automáticas por e-mail
+streaming/                     producer.py, consumer.py, exportar_silver.py
+tests/                         Testes automatizados de transformações, qualidade e lake
 data_lake/
-  bronze/, silver/, gold/       Parquet local (fora do Git; recriados pelo pipeline/BigQuery)
-  quality_reports/              execution_log.csv, gold_checks.csv, gold_anomalias.csv, silver_checks.csv
-docs/                           streaming_finops.md, Tech_Challenge_Fase_2.pdf
+  bronze/                      Arquivos Parquet locais da camada Bronze
+  silver/                      Arquivos Parquet locais da camada Silver
+  gold/                        Arquivos Parquet da Gold, versionados para a Fase 3
+  quality_reports/             execution_log.csv, gold_checks.csv, gold_anomalias.csv
+docs/                          streaming_finops.md, roteiro_video.md
 evidencias/
-  execucao_final/               rodada de 01/11/2026 (este README)
-  streaming_pubsub_2026-10/     execuções do streaming com Pub/Sub (17 a 29/10)
-  monitoramento_2026-10/        primeiro teste do alerta (26/10)
+  execucao_final/              Evidências da execução final de 01/11/2026
+  streaming_pubsub_2026-10/    Evidências do streaming com Pub/Sub (17 a 29/10)
+  monitoramento_2026-10/       Evidências do teste de alerta de 26/10/2026
 ```
 
-| Evidência (`evidencias/execucao_final/`)         | O que comprova                                                                          |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| `01_orcamento_bigquery_pubsub_storage.png`       | Orçamento com alertas em 50/90/100% cobrindo BigQuery, Pub/Sub e Cloud Storage          |
-| `02_testes_28_aprovados.png`                     | 28 testes aprovados (o 29º, da meta por trajetória, foi incluído depois e também passa) |
-| `03_exportacao_silver_streaming.png`             | Eventos do streaming levados à Silver no BigQuery                                       |
-| `04_` e `05_anomalia_duplicatas_*.png`           | Investigação das duplicatas do streaming                                                |
-| `../monitoramento_2026-10/01_*.png` a `03_*.png` | Primeiro teste do canal de alerta (26/10): falha forçada, registro e e-mail             |
-| `07_bigquery_datasets.png`                       | Datasets das camadas no BigQuery                                                        |
-| `08_bronze_historico_2_cargas.png`               | Histórico da Bronze preservado (2 cargas)                                               |
-| `09_bigquery_falhas_registradas.png`             | Falhas registradas no BigQuery                                                          |
+Os arquivos Parquet locais das camadas Bronze e Silver são mantidos fora do versionamento Git, enquanto seus dados também são persistidos no BigQuery. A camada Gold é preservada em arquivos Parquet versionados no repositório, permitindo sua reutilização na Fase 3.
 
-Testes de falha e alertas automáticos
-O mecanismo de monitoramento registra as falhas de execução e solicita o envio de notificações automáticas por e-mail.
+### 13.1 Evidências de execução e monitoramento
 
-Em 26/10/2026, foi realizado um teste com uma exceção simulada do tipo ValueError, utilizando a etapa TESTE_FALHA_EMAIL e o identificador TESTE-ALERTA-001.
+Os arquivos abaixo estão organizados na pasta evidencias/.
 
-O teste demonstrou o registro da falha e o recebimento do alerta no Gmail em menos de um minuto, conforme os horários registrados nas evidências. O tempo de recebimento pode variar conforme a conexão e o serviço de e-mail.
+| Evidência                                               | O que comprova                                                                                                                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| execucao_final/01_orcamento_bigquery_pubsub_storage.png | Configuração do orçamento e dos alertas de custo para BigQuery, Pub/Sub e Cloud Storage. A existência do orçamento não implica faturamento ativo. |
+| execucao_final/02_testes_28_aprovados.png               | Aprovação de 28 testes automatizados. O 29º teste foi incluído posteriormente e não está representado nessa captura.                              |
+| execucao_final/03_exportacao_silver_streaming.png       | Exportação de eventos do streaming para a camada Silver no BigQuery.                                                                              |
+| execucao_final/04_anomalia_duplicatas_streaming.png     | Investigação de registros duplicados nos eventos de streaming.                                                                                    |
+| execucao_final/05_anomalia_duplicatas_por_dia.png       | Análise da ocorrência de duplicidades de streaming por dia.                                                                                       |
+| execucao_final/06_alerta_email_falha_controlada.png     | Evidência do alerta por e-mail associado à falha controlada de 01/11/2026.                                                                        |
+| execucao_final/07_bigquery_datasets.png                 | Estrutura dos datasets das camadas do projeto no BigQuery.                                                                                        |
+| execucao_final/08_bronze_historico_2_cargas.png         | Preservação do histórico de duas cargas na camada Bronze, conforme o momento da captura.                                                          |
+| execucao_final/09_bigquery_falhas_registradas.png       | Registros de falhas de execução publicados no BigQuery.                                                                                           |
+| monitoramento_2026-10/01_falha_pipeline.png             | Exceção simulada durante o teste de monitoramento de 26/10/2026.                                                                                  |
+| monitoramento_2026-10/02_registro_falha.csv.png         | Registro da falha no arquivo de monitoramento.                                                                                                    |
+| monitoramento_2026-10/03_email_alerta_recebido.png      | Recebimento do e-mail de alerta no teste de 26/10/2026.                                                                                           |
 
-Adicionalmente, o módulo qualidade/simular_falha.py implementa uma simulação de duplicidade na camada Silver. A função checar_chave_unica identifica registros duplicados, registra a reprovação da regra bloqueante no gold_checks.csv e lança a exceção FalhaQualidadeBloqueante, interrompendo a execução.
+As evidências da execução final documentam a publicação das camadas, os testes automatizados, o acompanhamento de custos e os mecanismos de qualidade. As evidências de monitoramento permitem verificar separadamente o registro de falhas e o funcionamento das notificações por e-mail.
 
-A simulação utiliza uma cópia dos dados em memória, preservando o arquivo Silver original.
+### 13.2 Testes de falha e alertas automáticos
 
-O notebook salvo contém as saídas da execução 20261101_234421 (a terceira; a ingestão aparece com 0 byte faturado devido ao cache) e, no Apêndice A, a execução controlada FALHA_CONTROLADA_20261101_235525.
+O mecanismo de monitoramento registra falhas de execução e realiza tentativas automáticas de notificação por e-mail. Os registros são mantidos em data_lake/quality_reports/execution_log.csv e podem ser publicados no dataset alfabetizacao_monitoramento do BigQuery.
 
-Os bytes da execução sem cache estão registrados em data_lake/quality_reports/execution_log.csv, com run_id 20261101_220215.
+_Teste de monitoramento — 26/10/2026_
+
+Em 26/10/2026, foi realizado um teste utilizando uma exceção simulada do tipo ValueError, na etapa TESTE_FALHA_EMAIL, com o identificador TESTE-ALERTA-001.
+
+O teste demonstrou o registro da falha e o recebimento do alerta no Gmail em menos de um minuto, conforme os horários documentados nas evidências da pasta evidencias/monitoramento_2026-10/.
+
+Esse resultado comprova o funcionamento do canal de notificação no cenário testado. O tempo de recebimento pode variar conforme a conexão e a disponibilidade do serviço de e-mail.
+
+_Falha controlada de qualidade — 01/11/2026_
+
+O módulo qualidade/simular_falha.py implementa uma simulação controlada de duplicidade na camada Silver de municípios.
+
+Nesse procedimento, uma linha duplicada é inserida em uma cópia dos dados em memória. A função checar_chave_unica identifica a duplicidade e provoca os seguintes resultados:
+
+- Registro da regra bloqueante com status REPROVADO em gold_checks.csv.
+- Registro da etapa falha_controlada_silver_municipio com status FALHA em execution_log.csv.
+- Lançamento da exceção FalhaQualidadeBloqueante.
+- Encerramento do processo de teste com código de saída 1.
+- Acionamento do mecanismo de alerta por e-mail.
+- Publicação dos registros de monitoramento no BigQuery.
+
+A simulação preserva o arquivo Silver original, pois utiliza uma cópia dos dados em memória.
+
+O teste demonstra que uma regra bloqueante reprovada gera uma exceção, registra a ocorrência e interrompe o processo controlado. Por se tratar de uma execução isolada, não constitui prova de atomicidade entre todas as tabelas publicadas na Gold.
+
+O notebook registra essa demonstração no _Apêndice A_, com o identificador:
+
+FALHA_CONTROLADA_20261101_235525
+
+As saídas salvas mostram a reprovação da regra, o encerramento com código 1, os registros de monitoramento e a confirmação do acionamento do alerta.
+
+### 13.3 Execuções batch e rastreabilidade
+
+O notebook salvo contém as saídas da execução batch 20261101_234421, correspondente à terceira execução de 01/11/2026.
+
+Nessa execução, as consultas de ingestão utilizaram o cache do BigQuery, resultando em _0 byte faturado nas consultas de origem_, conforme os resultados registrados.
+
+A primeira execução batch do mesmo dia, identificada por 20261101_220215, foi realizada sem o mesmo aproveitamento de cache. Seus registros de execução e métricas de leitura estão preservados em:
+
+data_lake/quality_reports/execution_log.csv
+
+Os relatórios de monitoramento e qualidade incluem:
+
+- execution_log.csv: identificação das execuções, etapas, duração, volumes processados, status e erros.
+- gold_checks.csv: regras de qualidade executadas, resultados, limites e identificação das execuções.
+- gold_anomalias.csv: registros de anomalias identificadas durante o processamento analítico.
+
+Esses arquivos, em conjunto com as saídas do notebook e as evidências visuais, permitem rastrear as execuções, verificar a atuação das regras de qualidade e consultar os resultados de monitoramento.
 
 ---
 
