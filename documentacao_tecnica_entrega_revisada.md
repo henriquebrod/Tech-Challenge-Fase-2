@@ -10,24 +10,25 @@ Seu objetivo é registrar os **dados, tabelas, campos, tipos, relacionamentos, t
 
 O projeto utiliza pandas/Parquet localmente e BigQuery na nuvem. Para facilitar a leitura, este documento usa o **tipo lógico** do dado e, quando aplicável, o tipo utilizado no processamento.
 
-| Tipo lógico | pandas | BigQuery | Uso |
-|---|---|---|---|
-| Inteiro | `Int64` | `INTEGER` | ano, contagens e classificações inteiras |
-| Texto | `object` / `string` | `STRING` | identificadores, códigos e descrições |
-| Decimal | `float64` | `FLOAT` | taxas, médias, pesos e proporções |
-| Data/hora | string ISO / `datetime` | `TIMESTAMP` | produção, ingestão, início e fim de execução |
-| Booleano | `bool` | `BOOLEAN` ou texto em relatórios CSV | flags internas e resultados de validação |
+| Tipo lógico | pandas                  | BigQuery                             | Uso                                          |
+| ----------- | ----------------------- | ------------------------------------ | -------------------------------------------- |
+| Inteiro     | `Int64`                 | `INTEGER`                            | ano, contagens e classificações inteiras     |
+| Texto       | `object` / `string`     | `STRING`                             | identificadores, códigos e descrições        |
+| Decimal     | `float64`               | `FLOAT`                              | taxas, médias, pesos e proporções            |
+| Data/hora   | string ISO / `datetime` | `TIMESTAMP`                          | produção, ingestão, início e fim de execução |
+| Booleano    | `bool`                  | `BOOLEAN` ou texto em relatórios CSV | flags internas e resultados de validação     |
 
 ### 2.1 Metadados comuns da Bronze/Silver
 
 As entidades ingeridas recebem quatro campos técnicos de linhagem:
 
-| Campo | Tipo | Regra / significado |
-|---|---|---|
-| `_ingestion_timestamp` | STRING | Timestamp da carga no formato `YYYYMMDD_HHMMSS` |
-| `_source_table` | STRING | Tabela de origem na Base dos Dados |
-| `_source_system` | STRING | Valor utilizado: `basedosdados_bigquery` |
-| `_record_hash` | STRING | Hash MD5 do conteúdo do registro, usado para rastreabilidade |
+| Campo                  | Tipo   | Regra / significado                                          |
+| ---------------------- | ------ | ------------------------------------------------------------ |
+| `_ingestion_timestamp` | STRING | Timestamp da carga no formato `YYYYMMDD_HHMMSS`              |
+| `_source_table`        | STRING | Tabela de origem na Base dos Dados                           |
+| `_source_system`       | STRING | Valor utilizado: `basedosdados_bigquery`                     |
+| `_record_hash`         | STRING | Hash MD5 do conteúdo do registro, usado para rastreabilidade |
+
 ## 3. Dicionário de Dados — Fonte e Bronze
 
 A Bronze preserva os campos da fonte e adiciona os metadados de linhagem descritos na seção 2.1. A política de escrita no BigQuery é `WRITE_APPEND`, preservando cargas anteriores.
@@ -36,121 +37,121 @@ Os tipos abaixo correspondem aos tipos registrados pelo pandas durante a execuç
 
 ### 3.1 `municipio`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano de referência do indicador. |
-| `id_municipio` | `object` | 0 | Código do município utilizado nas chaves de integração. |
-| `serie` | `object` | 0 | Código da série escolar. |
-| `rede` | `object` | 0 | Código da rede de ensino; a descrição é obtida pelo dicionário oficial. |
-| `taxa_alfabetizacao` | `float64` | 0 | Percentual oficial de alfabetização. Valores não nulos são validados no intervalo de 0 a 100. |
-| `media_portugues` | `float64` | 0 | Média de proficiência em Língua Portuguesa. |
-| `proporcao_aluno_nivel_0` | `float64` | 11.547 | Proporção de alunos no nível 0. |
-| `proporcao_aluno_nivel_1` | `float64` | 11.547 | Proporção de alunos no nível 1. |
-| `proporcao_aluno_nivel_2` | `float64` | 11.547 | Proporção de alunos no nível 2. |
-| `proporcao_aluno_nivel_3` | `float64` | 11.547 | Proporção de alunos no nível 3. |
-| `proporcao_aluno_nivel_4` | `float64` | 11.547 | Proporção de alunos no nível 4. |
-| `proporcao_aluno_nivel_5` | `float64` | 11.547 | Proporção de alunos no nível 5. |
-| `proporcao_aluno_nivel_6` | `float64` | 11.547 | Proporção de alunos no nível 6. |
-| `proporcao_aluno_nivel_7` | `float64` | 11.547 | Proporção de alunos no nível 7. |
-| `proporcao_aluno_nivel_8` | `float64` | 11.547 | Proporção de alunos no nível 8. |
+| Campo                     | Tipo pandas | Nulos registrados | Descrição / regra                                                                             |
+| ------------------------- | ----------- | ----------------: | --------------------------------------------------------------------------------------------- |
+| `ano`                     | `Int64`     |                 0 | Ano de referência do indicador.                                                               |
+| `id_municipio`            | `object`    |                 0 | Código do município utilizado nas chaves de integração.                                       |
+| `serie`                   | `object`    |                 0 | Código da série escolar.                                                                      |
+| `rede`                    | `object`    |                 0 | Código da rede de ensino; a descrição é obtida pelo dicionário oficial.                       |
+| `taxa_alfabetizacao`      | `float64`   |                 0 | Percentual oficial de alfabetização. Valores não nulos são validados no intervalo de 0 a 100. |
+| `media_portugues`         | `float64`   |                 0 | Média de proficiência em Língua Portuguesa.                                                   |
+| `proporcao_aluno_nivel_0` | `float64`   |            11.547 | Proporção de alunos no nível 0.                                                               |
+| `proporcao_aluno_nivel_1` | `float64`   |            11.547 | Proporção de alunos no nível 1.                                                               |
+| `proporcao_aluno_nivel_2` | `float64`   |            11.547 | Proporção de alunos no nível 2.                                                               |
+| `proporcao_aluno_nivel_3` | `float64`   |            11.547 | Proporção de alunos no nível 3.                                                               |
+| `proporcao_aluno_nivel_4` | `float64`   |            11.547 | Proporção de alunos no nível 4.                                                               |
+| `proporcao_aluno_nivel_5` | `float64`   |            11.547 | Proporção de alunos no nível 5.                                                               |
+| `proporcao_aluno_nivel_6` | `float64`   |            11.547 | Proporção de alunos no nível 6.                                                               |
+| `proporcao_aluno_nivel_7` | `float64`   |            11.547 | Proporção de alunos no nível 7.                                                               |
+| `proporcao_aluno_nivel_8` | `float64`   |            11.547 | Proporção de alunos no nível 8.                                                               |
 
 ### 3.2 `uf`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano de referência. |
-| `sigla_uf` | `object` | 0 | Sigla da Unidade Federativa. |
-| `serie` | `object` | 0 | Código da série escolar. |
-| `rede` | `object` | 0 | Código da rede de ensino. |
-| `taxa_alfabetizacao` | `float64` | 0 | Percentual oficial de alfabetização. Valores não nulos são validados no intervalo de 0 a 100. |
-| `media_portugues` | `float64` | 0 | Média de proficiência em Língua Portuguesa. |
-| `proporcao_aluno_nivel_0` | `float64` | 70 | Proporção de alunos no nível 0. |
-| `proporcao_aluno_nivel_1` | `float64` | 70 | Proporção de alunos no nível 1. |
-| `proporcao_aluno_nivel_2` | `float64` | 70 | Proporção de alunos no nível 2. |
-| `proporcao_aluno_nivel_3` | `float64` | 70 | Proporção de alunos no nível 3. |
-| `proporcao_aluno_nivel_4` | `float64` | 70 | Proporção de alunos no nível 4. |
-| `proporcao_aluno_nivel_5` | `float64` | 70 | Proporção de alunos no nível 5. |
-| `proporcao_aluno_nivel_6` | `float64` | 70 | Proporção de alunos no nível 6. |
-| `proporcao_aluno_nivel_7` | `float64` | 70 | Proporção de alunos no nível 7. |
-| `proporcao_aluno_nivel_8` | `float64` | 70 | Proporção de alunos no nível 8. |
+| Campo                     | Tipo pandas | Nulos registrados | Descrição / regra                                                                             |
+| ------------------------- | ----------- | ----------------: | --------------------------------------------------------------------------------------------- |
+| `ano`                     | `Int64`     |                 0 | Ano de referência.                                                                            |
+| `sigla_uf`                | `object`    |                 0 | Sigla da Unidade Federativa.                                                                  |
+| `serie`                   | `object`    |                 0 | Código da série escolar.                                                                      |
+| `rede`                    | `object`    |                 0 | Código da rede de ensino.                                                                     |
+| `taxa_alfabetizacao`      | `float64`   |                 0 | Percentual oficial de alfabetização. Valores não nulos são validados no intervalo de 0 a 100. |
+| `media_portugues`         | `float64`   |                 0 | Média de proficiência em Língua Portuguesa.                                                   |
+| `proporcao_aluno_nivel_0` | `float64`   |                70 | Proporção de alunos no nível 0.                                                               |
+| `proporcao_aluno_nivel_1` | `float64`   |                70 | Proporção de alunos no nível 1.                                                               |
+| `proporcao_aluno_nivel_2` | `float64`   |                70 | Proporção de alunos no nível 2.                                                               |
+| `proporcao_aluno_nivel_3` | `float64`   |                70 | Proporção de alunos no nível 3.                                                               |
+| `proporcao_aluno_nivel_4` | `float64`   |                70 | Proporção de alunos no nível 4.                                                               |
+| `proporcao_aluno_nivel_5` | `float64`   |                70 | Proporção de alunos no nível 5.                                                               |
+| `proporcao_aluno_nivel_6` | `float64`   |                70 | Proporção de alunos no nível 6.                                                               |
+| `proporcao_aluno_nivel_7` | `float64`   |                70 | Proporção de alunos no nível 7.                                                               |
+| `proporcao_aluno_nivel_8` | `float64`   |                70 | Proporção de alunos no nível 8.                                                               |
 
 ### 3.3 `meta_alfabetizacao_brasil`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano da linha de resultado/pactuação nacional. |
-| `rede` | `object` | 0 | Rede à qual a taxa e a trajetória de metas se referem. |
-| `taxa_alfabetizacao` | `float64` | 0 | Taxa oficial publicada para o ano. |
-| `meta_alfabetizacao_2024` | `float64` | 0 | Meta pactuada para 2024. |
-| `meta_alfabetizacao_2025` | `float64` | 0 | Meta pactuada para 2025. |
-| `meta_alfabetizacao_2026` | `float64` | 0 | Meta pactuada para 2026. |
-| `meta_alfabetizacao_2027` | `float64` | 0 | Meta pactuada para 2027. |
-| `meta_alfabetizacao_2028` | `float64` | 0 | Meta pactuada para 2028. |
-| `meta_alfabetizacao_2029` | `float64` | 0 | Meta pactuada para 2029. |
-| `meta_alfabetizacao_2030` | `float64` | 0 | Meta pactuada para 2030. |
-| `percentual_participacao` | `float64` | 0 | Percentual de participação da avaliação. |
+| Campo                     | Tipo pandas | Nulos registrados | Descrição / regra                                      |
+| ------------------------- | ----------- | ----------------: | ------------------------------------------------------ |
+| `ano`                     | `Int64`     |                 0 | Ano da linha de resultado/pactuação nacional.          |
+| `rede`                    | `object`    |                 0 | Rede à qual a taxa e a trajetória de metas se referem. |
+| `taxa_alfabetizacao`      | `float64`   |                 0 | Taxa oficial publicada para o ano.                     |
+| `meta_alfabetizacao_2024` | `float64`   |                 0 | Meta pactuada para 2024.                               |
+| `meta_alfabetizacao_2025` | `float64`   |                 0 | Meta pactuada para 2025.                               |
+| `meta_alfabetizacao_2026` | `float64`   |                 0 | Meta pactuada para 2026.                               |
+| `meta_alfabetizacao_2027` | `float64`   |                 0 | Meta pactuada para 2027.                               |
+| `meta_alfabetizacao_2028` | `float64`   |                 0 | Meta pactuada para 2028.                               |
+| `meta_alfabetizacao_2029` | `float64`   |                 0 | Meta pactuada para 2029.                               |
+| `meta_alfabetizacao_2030` | `float64`   |                 0 | Meta pactuada para 2030.                               |
+| `percentual_participacao` | `float64`   |                 0 | Percentual de participação da avaliação.               |
 
 ### 3.4 `meta_alfabetizacao_uf`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano da linha de resultado/pactuação estadual. |
-| `sigla_uf` | `object` | 0 | Sigla da Unidade Federativa. |
-| `rede` | `object` | 0 | Rede à qual a taxa e as metas se referem. |
-| `taxa_alfabetizacao` | `float64` | 4 | Taxa publicada para a UF. |
-| `meta_alfabetizacao_2024` | `float64` | 9 | Meta pactuada para 2024. |
-| `meta_alfabetizacao_2025` | `float64` | 3 | Meta pactuada para 2025. |
-| `meta_alfabetizacao_2026` | `float64` | 2 | Meta pactuada para 2026. |
-| `meta_alfabetizacao_2027` | `float64` | 2 | Meta pactuada para 2027. |
-| `meta_alfabetizacao_2028` | `float64` | 2 | Meta pactuada para 2028. |
-| `meta_alfabetizacao_2029` | `float64` | 2 | Meta pactuada para 2029. |
-| `meta_alfabetizacao_2030` | `float64` | 2 | Meta pactuada para 2030. |
-| `percentual_participacao` | `float64` | 4 | Percentual de participação. |
+| Campo                     | Tipo pandas | Nulos registrados | Descrição / regra                             |
+| ------------------------- | ----------- | ----------------: | --------------------------------------------- |
+| `ano`                     | `Int64`     |                 0 | Ano da linha de resultado/pactuação estadual. |
+| `sigla_uf`                | `object`    |                 0 | Sigla da Unidade Federativa.                  |
+| `rede`                    | `object`    |                 0 | Rede à qual a taxa e as metas se referem.     |
+| `taxa_alfabetizacao`      | `float64`   |                 4 | Taxa publicada para a UF.                     |
+| `meta_alfabetizacao_2024` | `float64`   |                 9 | Meta pactuada para 2024.                      |
+| `meta_alfabetizacao_2025` | `float64`   |                 3 | Meta pactuada para 2025.                      |
+| `meta_alfabetizacao_2026` | `float64`   |                 2 | Meta pactuada para 2026.                      |
+| `meta_alfabetizacao_2027` | `float64`   |                 2 | Meta pactuada para 2027.                      |
+| `meta_alfabetizacao_2028` | `float64`   |                 2 | Meta pactuada para 2028.                      |
+| `meta_alfabetizacao_2029` | `float64`   |                 2 | Meta pactuada para 2029.                      |
+| `meta_alfabetizacao_2030` | `float64`   |                 2 | Meta pactuada para 2030.                      |
+| `percentual_participacao` | `float64`   |                 4 | Percentual de participação.                   |
 
 ### 3.5 `meta_alfabetizacao_municipio`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano da linha de resultado/pactuação municipal. |
-| `id_municipio` | `object` | 0 | Código do município utilizado nas chaves de integração. |
-| `rede` | `object` | 0 | Rede à qual a taxa e as metas se referem. |
-| `taxa_alfabetizacao` | `float64` | 120 | Taxa municipal publicada. |
-| `meta_alfabetizacao_2024` | `float64` | 240 | Meta pactuada para 2024. |
-| `meta_alfabetizacao_2025` | `float64` | 0 | Meta pactuada para 2025. |
-| `meta_alfabetizacao_2026` | `float64` | 0 | Meta pactuada para 2026. |
-| `meta_alfabetizacao_2027` | `float64` | 0 | Meta pactuada para 2027. |
-| `meta_alfabetizacao_2028` | `float64` | 0 | Meta pactuada para 2028. |
-| `meta_alfabetizacao_2029` | `float64` | 0 | Meta pactuada para 2029. |
-| `meta_alfabetizacao_2030` | `float64` | 0 | Meta pactuada para 2030. |
-| `nivel_alfabetizacao` | `Int64` | 120 | Nível de alfabetização informado pela fonte. |
-| `percentual_participacao` | `float64` | 120 | Percentual de participação. |
+| Campo                     | Tipo pandas | Nulos registrados | Descrição / regra                                       |
+| ------------------------- | ----------- | ----------------: | ------------------------------------------------------- |
+| `ano`                     | `Int64`     |                 0 | Ano da linha de resultado/pactuação municipal.          |
+| `id_municipio`            | `object`    |                 0 | Código do município utilizado nas chaves de integração. |
+| `rede`                    | `object`    |                 0 | Rede à qual a taxa e as metas se referem.               |
+| `taxa_alfabetizacao`      | `float64`   |               120 | Taxa municipal publicada.                               |
+| `meta_alfabetizacao_2024` | `float64`   |               240 | Meta pactuada para 2024.                                |
+| `meta_alfabetizacao_2025` | `float64`   |                 0 | Meta pactuada para 2025.                                |
+| `meta_alfabetizacao_2026` | `float64`   |                 0 | Meta pactuada para 2026.                                |
+| `meta_alfabetizacao_2027` | `float64`   |                 0 | Meta pactuada para 2027.                                |
+| `meta_alfabetizacao_2028` | `float64`   |                 0 | Meta pactuada para 2028.                                |
+| `meta_alfabetizacao_2029` | `float64`   |                 0 | Meta pactuada para 2029.                                |
+| `meta_alfabetizacao_2030` | `float64`   |                 0 | Meta pactuada para 2030.                                |
+| `nivel_alfabetizacao`     | `Int64`     |               120 | Nível de alfabetização informado pela fonte.            |
+| `percentual_participacao` | `float64`   |               120 | Percentual de participação.                             |
 
 ### 3.6 `dicionario`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `id_tabela` | `object` | 0 | Identifica a tabela à qual o mapeamento pertence. |
-| `nome_coluna` | `object` | 0 | Identifica a coluna categórica traduzida. |
-| `chave` | `object` | 0 | Código original da categoria. |
-| `cobertura_temporal` | `object` | 0 | Período de cobertura informado pela fonte. |
-| `valor` | `object` | 0 | Descrição oficial associada ao código. |
+| Campo                | Tipo pandas | Nulos registrados | Descrição / regra                                 |
+| -------------------- | ----------- | ----------------: | ------------------------------------------------- |
+| `id_tabela`          | `object`    |                 0 | Identifica a tabela à qual o mapeamento pertence. |
+| `nome_coluna`        | `object`    |                 0 | Identifica a coluna categórica traduzida.         |
+| `chave`              | `object`    |                 0 | Código original da categoria.                     |
+| `cobertura_temporal` | `object`    |                 0 | Período de cobertura informado pela fonte.        |
+| `valor`              | `object`    |                 0 | Descrição oficial associada ao código.            |
 
 ### 3.7 `alunos`
 
-| Campo | Tipo pandas | Nulos registrados | Descrição / regra |
-|---|---|---:|---|
-| `ano` | `Int64` | 0 | Ano da avaliação. |
-| `id_municipio` | `object` | 0 | Código do município. |
-| `id_escola` | `object` | 0 | Identificador da escola. |
-| `id_aluno` | `object` | 0 | Identificador do aluno. |
-| `caderno` | `object` | 0 | Código do caderno/prova. |
-| `serie` | `object` | 0 | Código da série escolar. |
-| `rede` | `object` | 0 | Código da rede de ensino. |
-| `presenca` | `object` | 0 | Código de presença; a descrição é obtida pelo dicionário. |
-| `preenchimento_caderno` | `object` | 0 | Código de preenchimento do caderno; a descrição é obtida pelo dicionário. |
-| `alfabetizado` | `object` | 0 | Indicador categórico de alfabetização; a descrição é obtida pelo dicionário. |
-| `proficiencia` | `float64` | 513.338 | Pontuação de proficiência. |
-| `peso_aluno` | `float64` | 513.338 | Peso amostral utilizado no cálculo ponderado. |
+| Campo                   | Tipo pandas | Nulos registrados | Descrição / regra                                                            |
+| ----------------------- | ----------- | ----------------: | ---------------------------------------------------------------------------- |
+| `ano`                   | `Int64`     |                 0 | Ano da avaliação.                                                            |
+| `id_municipio`          | `object`    |                 0 | Código do município.                                                         |
+| `id_escola`             | `object`    |                 0 | Identificador da escola.                                                     |
+| `id_aluno`              | `object`    |                 0 | Identificador do aluno.                                                      |
+| `caderno`               | `object`    |                 0 | Código do caderno/prova.                                                     |
+| `serie`                 | `object`    |                 0 | Código da série escolar.                                                     |
+| `rede`                  | `object`    |                 0 | Código da rede de ensino.                                                    |
+| `presenca`              | `object`    |                 0 | Código de presença; a descrição é obtida pelo dicionário.                    |
+| `preenchimento_caderno` | `object`    |                 0 | Código de preenchimento do caderno; a descrição é obtida pelo dicionário.    |
+| `alfabetizado`          | `object`    |                 0 | Indicador categórico de alfabetização; a descrição é obtida pelo dicionário. |
+| `proficiencia`          | `float64`   |           513.338 | Pontuação de proficiência.                                                   |
+| `peso_aluno`            | `float64`   |           513.338 | Peso amostral utilizado no cálculo ponderado.                                |
 
 ## 4. Camada Silver
 
@@ -169,15 +170,15 @@ A Silver mantém os campos das entidades, padroniza tipos, remove duplicatas exa
 
 ### 4.2 Chaves e validações por entidade
 
-| Entidade | Regra de identificação / unicidade utilizada |
-|---|---|
-| `municipio` | unicidade em `ano + id_municipio + serie + rede` |
-| `uf` | unicidade em `ano + sigla_uf + serie + rede` |
-| `meta_alfabetizacao_brasil` | unicidade em `ano + rede` |
-| `meta_alfabetizacao_uf` | unicidade em `ano + sigla_uf + rede` |
-| `meta_alfabetizacao_municipio` | unicidade em `ano + id_municipio + rede` |
-| `dicionario` | ausência de nulos em `id_tabela + nome_coluna + chave + valor` e unicidade em `id_tabela + nome_coluna + chave` |
-| `alunos` | ausência de nulos em `ano + id_municipio + id_escola + id_aluno` e unicidade do aluno em `ano + id_aluno` |
+| Entidade                       | Regra de identificação / unicidade utilizada                                                                    |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `municipio`                    | unicidade em `ano + id_municipio + serie + rede`                                                                |
+| `uf`                           | unicidade em `ano + sigla_uf + serie + rede`                                                                    |
+| `meta_alfabetizacao_brasil`    | unicidade em `ano + rede`                                                                                       |
+| `meta_alfabetizacao_uf`        | unicidade em `ano + sigla_uf + rede`                                                                            |
+| `meta_alfabetizacao_municipio` | unicidade em `ano + id_municipio + rede`                                                                        |
+| `dicionario`                   | ausência de nulos em `id_tabela + nome_coluna + chave + valor` e unicidade em `id_tabela + nome_coluna + chave` |
+| `alunos`                       | ausência de nulos em `ano + id_municipio + id_escola + id_aluno` e unicidade do aluno em `ano + id_aluno`       |
 
 ### 4.3 Regras de domínio e consistência
 
@@ -193,15 +194,15 @@ A Silver mantém os campos das entidades, padroniza tipos, remove duplicatas exa
 
 Arquivo: `streaming/producer.py`.
 
-| Campo | Tipo | Obrigatório | Regra |
-|---|---|---|---|
-| `event_id` | STRING | Sim | UUID do evento; chave de deduplicação |
-| `produced_at` | TIMESTAMP/ISO-8601 | Sim | Gerado pelo producer em UTC |
-| `ano` | INTEGER | Sim | Configurado por `STREAMING_ANO`; padrão atual 2024 |
-| `sigla_uf` | STRING | Sim | UF associada ao município simulado |
-| `id_municipio` | STRING | Sim | Código IBGE do município simulado |
-| `indicador_alfabetizacao` | FLOAT | Sim | Valor simulado; deve permanecer entre 0 e 100 |
-| `origem` | STRING | Sim | Deve ser exatamente `simulado` |
+| Campo                     | Tipo               | Obrigatório | Regra                                              |
+| ------------------------- | ------------------ | ----------- | -------------------------------------------------- |
+| `event_id`                | STRING             | Sim         | UUID do evento; chave de deduplicação              |
+| `produced_at`             | TIMESTAMP/ISO-8601 | Sim         | Gerado pelo producer em UTC                        |
+| `ano`                     | INTEGER            | Sim         | Configurado por `STREAMING_ANO`; padrão atual 2024 |
+| `sigla_uf`                | STRING             | Sim         | UF associada ao município simulado                 |
+| `id_municipio`            | STRING             | Sim         | Código IBGE do município simulado                  |
+| `indicador_alfabetizacao` | FLOAT              | Sim         | Valor simulado; deve permanecer entre 0 e 100      |
+| `origem`                  | STRING             | Sim         | Deve ser exatamente `simulado`                     |
 
 O modo de teste pode gerar intencionalmente evento válido, duplicado, indicador fora do domínio e evento com campo ausente.
 
@@ -209,107 +210,109 @@ O modo de teste pode gerar intencionalmente evento válido, duplicado, indicador
 
 Tabela BigQuery utilizada pelo consumer.
 
-| Campo | Tipo BigQuery | Regra |
-|---|---|---|
-| `event_id` | STRING | Identificador único lógico |
-| `produced_at` | TIMESTAMP | Horário do producer |
-| `ingested_at` | TIMESTAMP | Horário de chegada no consumer |
-| `ano` | INTEGER | Ano do evento |
-| `sigla_uf` | STRING | UF |
-| `id_municipio` | STRING | Município |
-| `indicador_alfabetizacao` | FLOAT | Domínio 0–100 |
-| `origem` | STRING | `simulado` |
-| `latencia_segundos` | FLOAT | `ingested_at - produced_at` em segundos |
+| Campo                     | Tipo BigQuery | Regra                                   |
+| ------------------------- | ------------- | --------------------------------------- |
+| `event_id`                | STRING        | Identificador único lógico              |
+| `produced_at`             | TIMESTAMP     | Horário do producer                     |
+| `ingested_at`             | TIMESTAMP     | Horário de chegada no consumer          |
+| `ano`                     | INTEGER       | Ano do evento                           |
+| `sigla_uf`                | STRING        | UF                                      |
+| `id_municipio`            | STRING        | Município                               |
+| `indicador_alfabetizacao` | FLOAT         | Domínio 0–100                           |
+| `origem`                  | STRING        | `simulado`                              |
+| `latencia_segundos`       | FLOAT         | `ingested_at - produced_at` em segundos |
 
 A tabela é particionada por `ingested_at` e, na configuração documentada, possui retenção de 60 dias.
 
 ### 5.3 `eventos_invalidos`
 
-| Campo | Tipo BigQuery | Regra |
-|---|---|---|
-| `event_id` | STRING | Pode estar ausente quando o JSON não é interpretável |
-| `produced_at` | TIMESTAMP | Valor recebido, se disponível |
-| `ingested_at` | TIMESTAMP | Momento em que o consumer tratou o evento |
-| `ano` | INTEGER | Valor recebido, se disponível |
-| `sigla_uf` | STRING | Valor recebido, se disponível |
-| `id_municipio` | STRING | Valor recebido, se disponível |
-| `indicador_alfabetizacao` | FLOAT | Valor recebido, mesmo quando inválido |
-| `origem` | STRING | Valor recebido |
-| `motivo_erro` | STRING | Motivo da rejeição |
+| Campo                     | Tipo BigQuery | Regra                                                |
+| ------------------------- | ------------- | ---------------------------------------------------- |
+| `event_id`                | STRING        | Pode estar ausente quando o JSON não é interpretável |
+| `produced_at`             | TIMESTAMP     | Valor recebido, se disponível                        |
+| `ingested_at`             | TIMESTAMP     | Momento em que o consumer tratou o evento            |
+| `ano`                     | INTEGER       | Valor recebido, se disponível                        |
+| `sigla_uf`                | STRING        | Valor recebido, se disponível                        |
+| `id_municipio`            | STRING        | Valor recebido, se disponível                        |
+| `indicador_alfabetizacao` | FLOAT         | Valor recebido, mesmo quando inválido                |
+| `origem`                  | STRING        | Valor recebido                                       |
+| `motivo_erro`             | STRING        | Motivo da rejeição                                   |
 
 ### 5.4 `metricas_streaming`
 
-| Campo | Tipo BigQuery | Descrição |
-|---|---|---|
-| `execution_id` | STRING | Identificador do processamento do lote |
-| `started_at` | TIMESTAMP | Início do envio do lote |
-| `finished_at` | TIMESTAMP | Fim do processamento |
-| `duration_seconds` | FLOAT | Duração do lote |
-| `input_count` | INTEGER | Eventos recebidos no lote |
-| `output_count` | INTEGER | Eventos novos efetivamente persistidos |
-| `invalid_count` | INTEGER | Inválidos contabilizados |
-| `status` | STRING | `SUCESSO` ou `ERRO` |
-| `error_message` | STRING | Mensagem de erro quando aplicável |
+| Campo              | Tipo BigQuery | Descrição                              |
+| ------------------ | ------------- | -------------------------------------- |
+| `execution_id`     | STRING        | Identificador do processamento do lote |
+| `started_at`       | TIMESTAMP     | Início do envio do lote                |
+| `finished_at`      | TIMESTAMP     | Fim do processamento                   |
+| `duration_seconds` | FLOAT         | Duração do lote                        |
+| `input_count`      | INTEGER       | Eventos recebidos no lote              |
+| `output_count`     | INTEGER       | Eventos novos efetivamente persistidos |
+| `invalid_count`    | INTEGER       | Inválidos contabilizados               |
+| `status`           | STRING        | `SUCESSO` ou `ERRO`                    |
+| `error_message`    | STRING        | Mensagem de erro quando aplicável      |
 
 ### 5.5 Silver do Streaming — `streaming_eventos_validos`
 
 Gerada por `streaming/exportar_silver.py`.
 
-| Campo | Tipo lógico | Transformação |
-|---|---|---|
-| `ano` | INTEGER | Mantido do evento |
-| `id_municipio` | STRING | Convertido para texto e completado para 7 dígitos |
-| `serie` | STRING | Valor fixo `'2'` |
-| `rede` | STRING | Valor fixo `'3'`, correspondente à rede Municipal no dicionário |
-| `taxa_alfabetizacao` | FLOAT | Renomeado de `indicador_alfabetizacao` |
-| `event_id` | STRING | Mantido para deduplicação |
-| `event_ts` | TIMESTAMP | Renomeado de `produced_at` |
-| `ingest_ts` | TIMESTAMP | Renomeado de `ingested_at` |
+| Campo                | Tipo lógico | Transformação                                                   |
+| -------------------- | ----------- | --------------------------------------------------------------- |
+| `ano`                | INTEGER     | Mantido do evento                                               |
+| `id_municipio`       | STRING      | Convertido para texto e completado para 7 dígitos               |
+| `serie`              | STRING      | Valor fixo `'2'`                                                |
+| `rede`               | STRING      | Valor fixo `'3'`, correspondente à rede Municipal no dicionário |
+| `taxa_alfabetizacao` | FLOAT       | Renomeado de `indicador_alfabetizacao`                          |
+| `event_id`           | STRING      | Mantido para deduplicação                                       |
+| `event_ts`           | TIMESTAMP   | Renomeado de `produced_at`                                      |
+| `ingest_ts`          | TIMESTAMP   | Renomeado de `ingested_at`                                      |
 
 Antes da gravação são removidas duplicidades por `event_id`, mantendo a última ocorrência, e taxas fora de 0–100 são descartadas.
+
 ## 6. Monitoramento e Relatórios Técnicos
 
 ### 6.1 `execution_log.csv`
 
-| Campo | Descrição |
-|---|---|
-| `run_id` | Identificador da execução |
-| `etapa` | Nome técnico da etapa |
-| `inicio` | Início da etapa |
-| `fim` | Fim da etapa |
-| `duracao_segundos` | Duração |
-| `linhas_entrada` | Quantidade de registros de entrada |
-| `linhas_saida` | Quantidade de registros de saída |
-| `bytes_lidos` | Volume lido/estimado |
-| `status` | `SUCESSO` ou `FALHA` |
-| `erro` | Mensagem da exceção, quando houver |
+| Campo              | Descrição                          |
+| ------------------ | ---------------------------------- |
+| `run_id`           | Identificador da execução          |
+| `etapa`            | Nome técnico da etapa              |
+| `inicio`           | Início da etapa                    |
+| `fim`              | Fim da etapa                       |
+| `duracao_segundos` | Duração                            |
+| `linhas_entrada`   | Quantidade de registros de entrada |
+| `linhas_saida`     | Quantidade de registros de saída   |
+| `bytes_lidos`      | Volume lido/estimado               |
+| `status`           | `SUCESSO` ou `FALHA`               |
+| `erro`             | Mensagem da exceção, quando houver |
 
 ### 6.2 `gold_checks.csv`
 
-| Campo | Descrição |
-|---|---|
-| `gold_run_ts` | Identificador da execução que produziu o check |
-| `regra` | Nome da regra aplicada |
-| `tabela` | Entidade/tabela validada |
-| `tipo` | `bloqueante` ou `informativa` |
-| `status` | `APROVADO` ou `REPROVADO` |
-| `valor` | Valor medido |
-| `limiar` | Limite utilizado |
-| `detalhe` | Evidência textual da regra |
-| `registrado_em` | Timestamp do registro |
+| Campo           | Descrição                                      |
+| --------------- | ---------------------------------------------- |
+| `gold_run_ts`   | Identificador da execução que produziu o check |
+| `regra`         | Nome da regra aplicada                         |
+| `tabela`        | Entidade/tabela validada                       |
+| `tipo`          | `bloqueante` ou `informativa`                  |
+| `status`        | `APROVADO` ou `REPROVADO`                      |
+| `valor`         | Valor medido                                   |
+| `limiar`        | Limite utilizado                               |
+| `detalhe`       | Evidência textual da regra                     |
+| `registrado_em` | Timestamp do registro                          |
 
 ### 6.3 `gold_anomalias.csv`
 
-| Campo | Descrição |
-|---|---|
-| `gold_run_ts` | Identificador da execução |
-| `codigo` | Código da anomalia |
-| `descricao` | Descrição do problema investigado |
-| `evidencia` | Dados que sustentam a análise |
+| Campo         | Descrição                         |
+| ------------- | --------------------------------- |
+| `gold_run_ts` | Identificador da execução         |
+| `codigo`      | Código da anomalia                |
+| `descricao`   | Descrição do problema investigado |
+| `evidencia`   | Dados que sustentam a análise     |
 
 ### 6.4 Tipagem no BigQuery dos relatórios CSV
 
 O módulo `nuvem/lake.py` cria o schema dos arquivos CSV de monitoramento com **todas as colunas como `STRING`**. Isso é intencional para suportar valores heterogêneos em campos como `valor`, `limiar`, `detalhe` e `erro`.
+
 ## 7. Camada Gold
 
 A camada Gold concentra as estruturas analíticas derivadas das camadas Silver e das regras de integração do projeto.
@@ -543,6 +546,7 @@ Os timestamps são criados em componentes diferentes: producer e consumer.
 ### RN14 — Features da Fase 3
 
 A base de features deve usar apenas informações conhecidas antes do alvo. A regra `sem_vazamento_de_alvo` é bloqueante. Os testes e relatórios registram `alvo_taxa_alfabetizacao` e features do ano anterior, como `media_portugues_ano_anterior`.
+
 ## 9. Regras de Qualidade
 
 O módulo `qualidade/verificador.py` implementa dois tipos de regra:
@@ -586,6 +590,7 @@ Entre os relacionamentos monitorados estão:
 - UF × microdado;
 - features × ano anterior;
 - features × UF do ano anterior.
+
 ## 10. Relacionamentos e Linhagem
 
 ### 10.1 Fluxo batch
@@ -602,16 +607,16 @@ Gold (regras de negócio, agregações e joins)
 
 ### 10.2 Relacionamentos principais
 
-| Origem | Destino / uso | Chaves principais |
-|---|---|---|
-| `municipio` | resultado municipal × meta | `ano`, `id_municipio`, rede normalizada |
-| `meta_alfabetizacao_municipio` | resultado municipal × meta | `ano`, `id_municipio`, rede normalizada |
-| `uf` | resultado estadual × meta | `ano`, `sigla_uf`, rede normalizada |
-| `meta_alfabetizacao_uf` | resultado estadual × meta | `ano`, `sigla_uf`, rede normalizada |
-| `meta_alfabetizacao_brasil` | comparação nacional | `ano`, rede normalizada |
-| `alunos` | recálculo ponderado e validação | ano/localidade/rede conforme nível de agregação |
-| `dicionario` | tradução das categorias | `id_tabela`, `nome_coluna`, `chave` |
-| `streaming_eventos_validos` | resultado municipal simulado | `ano`, `id_municipio`, `serie`, `rede` |
+| Origem                         | Destino / uso                   | Chaves principais                               |
+| ------------------------------ | ------------------------------- | ----------------------------------------------- |
+| `municipio`                    | resultado municipal × meta      | `ano`, `id_municipio`, rede normalizada         |
+| `meta_alfabetizacao_municipio` | resultado municipal × meta      | `ano`, `id_municipio`, rede normalizada         |
+| `uf`                           | resultado estadual × meta       | `ano`, `sigla_uf`, rede normalizada             |
+| `meta_alfabetizacao_uf`        | resultado estadual × meta       | `ano`, `sigla_uf`, rede normalizada             |
+| `meta_alfabetizacao_brasil`    | comparação nacional             | `ano`, rede normalizada                         |
+| `alunos`                       | recálculo ponderado e validação | ano/localidade/rede conforme nível de agregação |
+| `dicionario`                   | tradução das categorias         | `id_tabela`, `nome_coluna`, `chave`             |
+| `streaming_eventos_validos`    | resultado municipal simulado    | `ano`, `id_municipio`, `serie`, `rede`          |
 
 ### 10.3 Fluxo streaming
 
@@ -630,19 +635,21 @@ Consumer
                               ↓
                    Gold municipal (simulado)
 ```
+
 ## 11. Política de Escrita e Persistência
 
-| Camada | Política |
-|---|---|
-| Bronze local | um Parquet por carga |
-| Bronze BigQuery | `WRITE_APPEND` |
-| Silver local | arquivo derivado substituível |
-| Silver BigQuery | `WRITE_TRUNCATE` |
-| Gold BigQuery | `WRITE_TRUNCATE`, após validação/publicação |
-| Quality reports | CSV acumulado local; espelho completo reenviado ao BigQuery |
-| Streaming válidos | cargas incrementais por micro-lote |
+| Camada            | Política                                                    |
+| ----------------- | ----------------------------------------------------------- |
+| Bronze local      | um Parquet por carga                                        |
+| Bronze BigQuery   | `WRITE_APPEND`                                              |
+| Silver local      | arquivo derivado substituível                               |
+| Silver BigQuery   | `WRITE_TRUNCATE`                                            |
+| Gold BigQuery     | `WRITE_TRUNCATE`, após validação/publicação                 |
+| Quality reports   | CSV acumulado local; espelho completo reenviado ao BigQuery |
+| Streaming válidos | cargas incrementais por micro-lote                          |
 
 A Bronze é a camada que preserva o histórico de ingestões. Silver e Gold são reconstruíveis a partir das camadas anteriores.
+
 ## 12. Variáveis Técnicas Relevantes
 
 ### Streaming
