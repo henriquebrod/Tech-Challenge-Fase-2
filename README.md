@@ -432,19 +432,19 @@ Todos os identificadores ficam num único arquivo, [`.env.example`](.env.example
 ## 13. Estrutura do repositório e evidências
 
 ```text
-Tech_Challenge_Fase_2.ipynb    pipeline batch completo (Bronze, Silver, Gold, publicação, Apêndice A)
+Tech_Challenge_Fase_2.ipynb      pipeline batch completo (Bronze, Silver, Gold, publicação, Apêndice A)
 nuvem/lake.py                   envio das camadas ao BigQuery (load jobs)
 qualidade/verificador.py        regras bloqueantes e informativas
 qualidade/simular_falha.py      falha controlada
 monitoramento/registrador.py    métricas por etapa + envio ao BigQuery
 monitoramento/alertas.py        alerta por e-mail
 streaming/                      producer.py, consumer.py, exportar_silver.py
-tests/                          29 testes (transformações, qualidade, lake)
+tests/                          test_nuvem.py, test_qualidade.py, test_transformacoes.py
 data_lake/
   bronze/, silver/              Parquet local (fora do Git; ficam no BigQuery)
   gold/                         Parquet da Gold (versionado, base da Fase 3)
-  quality_reports/              execution_log.csv, gold_checks.csv, gold_anomalias.csv
-docs/                           streaming_finops.md, roteiro_video.md
+  quality_reports/              execution_log.csv, gold_checks.csv, gold_anomalias.csv, silver_checks.csv
+docs/                           streaming_finops.md, Tech_Challenge_Fase_2.pdf
 evidencias/
   execucao_final/               rodada de 01/11/2026 (este README)
   streaming_pubsub_2026-10/     execuções do streaming com Pub/Sub (17 a 29/10)
